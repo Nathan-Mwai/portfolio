@@ -1,5 +1,6 @@
 import React from "react";
 import { Spotlight } from "./ui/Spotlight";
+import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
   return (
@@ -26,6 +27,11 @@ const Hero = () => {
           <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
           Next.js Alchemy: Breathing Life into the Web
           </h2>
+
+          <TextGenerateEffect
+          className="text-center text-[40px] md:text-5xl lg:text-6xl"
+          words="Transforming Imagination into Interactive Realities"
+          />
         </div>
       </div>
     </div>
