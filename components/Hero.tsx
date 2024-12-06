@@ -32,6 +32,10 @@ const Hero = () => {
           className="text-center text-[40px] md:text-5xl lg:text-6xl"
           words="Transforming Imagination into Interactive Realities"
           />
+
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+            Hi, I&apos;m Nathan, a fullstack Developer based in Kenya.
+          </p>
         </div>
       </div>
     </div>
