@@ -205,13 +205,16 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link: "https://github.com/Nathan-Mwai",
   },
   {
     id: 2,
     img: "/twit.svg",
+    link: "https://x.com/mwaniki_na",
   },
   {
     id: 3,
     img: "/link.svg",
+    link: "https://www.linkedin.com/in/nathan-mwaniki-a9a28a2a5/",
   },
 ];
