@@ -64,7 +64,8 @@ export const BentoGridItem = ({
   };
 
   const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
+    const text = "mwaimwaniki001@gmail.com";
+    // so this is the command that when I click copies it to the clipboard
     navigator.clipboard.writeText(text);
     setCopied(true);
   };
@@ -143,10 +144,10 @@ backgroundColor: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(37,36,130,1) 32
                     {item}
                   </span>
                 ))}
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]" />
               </div>
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]" />
                 {rightLists.map((item, i) => (
                   <span
                     key={i}
@@ -161,13 +162,15 @@ backgroundColor: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(37,36,130,1) 32
           )}
           {id === 6 && (
             <div className="mt-5 relative">
-              {/* add handleCopy() for the copy the text */}
               <div
                 className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
                   }`}
               >
-                {/* <img src="/confetti.gif" alt="confetti" /> */}
-                <Lottie options={defaultOptions} height={200} width={400} />
+                <Lottie
+                options={defaultOptions}
+                height={200}
+                width={400}
+                />
               </div>
 
               <MagicButton
