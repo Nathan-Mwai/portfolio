@@ -90,7 +90,6 @@ export const InfiniteMovingCards = ({
             className="w-[90vw] max-w-full relative rounded-2xl border border-b-0
              flex-shrink-0 border-slate-800 p-5 md:p-16 md:w-[60vw]"
             style={{
-              //   you can generate the color from here https://cssgradient.io/
               background: 'rgb(2,0,36)',
               backgroundColor:
                 "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(37,36,130,1) 32%, rgba(67,67,209,1) 59%, rgba(26,149,171,1) 96%)",

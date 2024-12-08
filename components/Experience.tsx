@@ -14,19 +14,16 @@ const Experience = () => {
         {workExperience.map((card) => (
           <Button
             key={card.id}
-            //   random duration will be fun , I think , may be not
+            //   random duration will be fun , I think , may be not haha
             duration={Math.floor(Math.random() * 10000) + 10000}
             borderRadius="1.75rem"
             style={{
-              //   add these two
-              //   you can generate the color from here https://cssgradient.io/
-              background: "rgb(4,7,29)",
+              background: "rgb(2,0,36)",
               backgroundColor:
-                "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+                "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(37,36,130,1) 32%, rgba(67,67,209,1) 59%, rgba(26,149,171,1) 96%)",
               // add this border radius to make it more rounded so that the moving border is more realistic
               borderRadius: `calc(1.75rem* 0.96)`,
             }}
-            // remove bg-white dark:bg-slate-900
             className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
           >
             <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
