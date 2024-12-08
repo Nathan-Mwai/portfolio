@@ -1,15 +1,15 @@
-import { useState } from "react";
-import { IoCopyOutline } from "react-icons/io5";
-
-import Lottie from "react-lottie";
-
+"use client";
 import { cn } from "@/lib/utils";
-
-
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
+// import Lottie from 'react-lottie';
+import { useState } from "react";
 import animationData from "@/data/confetti.json";
+import { IoCopyOutline } from "react-icons/io5";
 import MagicButton from "../MagicButton";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 export const BentoGrid = ({
   className,
@@ -49,7 +49,7 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Express", "Python",];
+  const leftLists = ["ReactJS", "Express", "Python"];
   const rightLists = ["Nodejs", "NextJS", "Postgresql"];
 
   const [copied, setCopied] = useState(false);
@@ -77,8 +77,9 @@ export const BentoGridItem = ({
         className
       )}
       style={{
-background: 'rgb(2,0,36)',
-backgroundColor: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(37,36,130,1) 32%, rgba(67,67,209,1) 59%, rgba(26,149,171,1) 96%)'
+        background: "rgb(2,0,36)",
+        backgroundColor:
+          "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(37,36,130,1) 32%, rgba(67,67,209,1) 59%, rgba(26,149,171,1) 96%)",
       }}
     >
       {/* add img divs */}
@@ -93,8 +94,9 @@ backgroundColor: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(37,36,130,1) 32
           )}
         </div>
         <div
-          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
-            } `}
+          className={`absolute right-0 -bottom-5 ${
+            id === 5 && "w-full opacity-80"
+          } `}
         >
           {spareImg && (
             <img
@@ -163,14 +165,11 @@ backgroundColor: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(37,36,130,1) 32
           {id === 6 && (
             <div className="mt-5 relative">
               <div
-                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
-                  }`}
+                className={`absolute -bottom-5 right-0 ${
+                  copied ? "block" : "block"
+                }`}
               >
-                <Lottie
-                options={defaultOptions}
-                height={200}
-                width={400}
-                />
+                <Lottie options={defaultOptions} height={200} width={400} />
               </div>
 
               <MagicButton
