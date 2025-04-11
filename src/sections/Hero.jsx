@@ -1,6 +1,6 @@
 import Button from "../components/Button";
+import HeroExperience from "../components/HeroModels/HeroExperience";
 import { words } from "../constants";
-
 
 const Hero = () => {
   return (
@@ -16,14 +16,17 @@ const Hero = () => {
               <h1>
                 Shaping
                 <span className="slide">
-
                   <span className="wrapper">
                     {words.map((word) => (
                       <span
                         key={word.text}
                         className="flex items-center md:gap-3 gap-1 pb-2"
                       >
-                        <img src={word.imgPath} alt={word.text}  className="xl:size-12 md:size-10 size-7 m:p-2 p-1 rounded-full bg-white-50"/>
+                        <img
+                          src={word.imgPath}
+                          alt={word.text}
+                          className="xl:size-12 md:size-10 size-7 m:p-2 p-1 rounded-full bg-white-50"
+                        />
                         <span>{word.text}</span>
                       </span>
                     ))}
@@ -33,13 +36,23 @@ const Hero = () => {
               <h1>into Real Projects</h1>
               <h1>that Deliver Results</h1>
             </div>
-              <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                Hi, I&apos;m Nathan, a developer based in Kenya with a passion for code.
-              </p>
-              <Button className="md:w-80 md:h-16 w-60 h-12" id="button" text="See My work"/>
+            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+              Hi, I&apos;m Nathan, a developer based in Kenya with a passion for
+              code.
+            </p>
+            <Button
+              className="md:w-80 md:h-16 w-60 h-12"
+              id="button"
+              text="See My work"
+            />
           </div>
         </header>
         {/* Right side */}
+        <figure>
+          <div className="hero-3d-layout">
+            <HeroExperience />
+          </div>
+        </figure>
       </div>
     </section>
   );
