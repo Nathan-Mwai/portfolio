@@ -1,12 +1,47 @@
 import TitleHeader from '../components/TitleHeader.jsx'
 import ContactExperience from "../components/models/contact/ContactExperience.jsx";
+import {useRef, useState} from "react";
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+    const formRef = useRef(null)
 
-    const handleSubmit = () => {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: ""
+    })
+
+
+    const [loading, setLoading] = useState(false)
+    const handleOnchange = (e) => {
+        const {name, value} = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        })
     }
-    const handleOnchange = () => {
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true)
+        try {
+            await emailjs.sendForm(
+                import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+                formRef.current,
+                import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+            )
+            //Reset form after submission
+            setFormData({name: '', email: '', message: ''})
+        } catch (e) {
+            console.log('EmailJS Error', e)
+        } finally {
+            setLoading(false)
+        }
+
     }
+
     return (
         <section className={'flex-center section-padding'} id={'contact'}>
             <div className={'w-full h-full md:px-10 px-5'}>
@@ -18,7 +53,7 @@ const Contact = () => {
                     {/* Left side */}
                     <div className={'xl:col-span-5'}>
                         <div className={'flex-center card-border rounded-xl p-10 '}>
-                            <form onSubmit={handleSubmit} className={'w-full flex flex-col gap-7'}>
+                            <form onSubmit={handleSubmit} className={'w-full flex flex-col gap-7'} ref={formRef}>
                                 <div>
                                     <label htmlFor={'name'}>Name</label>
                                     <input
@@ -56,10 +91,10 @@ const Contact = () => {
                                     ></textarea>
                                 </div>
 
-                                <button type="submit">
+                                <button type="submit" disabled={loading}>
                                     <div className={'cta-button group'}>
                                         <div className={'bg-circle'}/>
-                                        <p className={'text'}>Send Message</p>
+                                        <p className={'text'}>{loading ? 'Sending...' : 'Send Message'}</p>
                                         <div className={'arrow-wrapper'}>
                                             <img src={'/images/arrow-down.svg'} alt={'arrow'}/>
                                         </div>
