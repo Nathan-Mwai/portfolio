@@ -55,6 +55,7 @@ const Experience = () => {
     return (
         <section id={'experience'} className={'w-full md:mt-40 mt-20 section-padding xl:px-0'}>
             <div className={'w-full h-full md:px-20 px-5'}>
+                {/*TODO: Update professional work experience to instead show your current journey and current projects I'm working on  this way I can both write the project as well as share my view on it such as the tech stack and what was implemented or something interesting */}
                 <TitleHeader title={'Professional Work Experience'} sub={'💼My Career OverView'}/>
                 <div className={'mt-32 relative'}>
                     <div className={'relative z-50 xl:space-y-32 space-y-10'}>
