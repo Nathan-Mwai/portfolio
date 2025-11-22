@@ -1,0 +1,9 @@
+reviews:
+  auto_review:
+    enabled: true                # Turn on automatic reviews
+    auto_incremental_review: true # Review every push incrementally
+    base_branches:
+      - ".*"                     # Regex: match all branches
+  review_status: true             # Post review details/status
+  commit_status: true             # Update commit status (pending/success)
+  fail_commit_status: false       # Optional: mark failure if review cannot run
