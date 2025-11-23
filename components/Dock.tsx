@@ -16,7 +16,7 @@ const Dock = () => {
 
         const icons = dock.querySelectorAll(".dock-icon");
 
-        const animateIcons = (mouseX) => {
+        const animateIcons = (mouseX:number) => {
             const {left} = dock.getBoundingClientRect()
 
             icons.forEach(icon => {
