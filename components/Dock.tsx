@@ -5,6 +5,8 @@ import {DISTANCE_DECAY, dockApps} from "@/constants";
 import {Tooltip} from "react-tooltip"
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
+import {DockApps} from "@/type";
+import Image from "next/image";
 
 
 const Dock = () => {
@@ -65,7 +67,7 @@ const Dock = () => {
     return (
         <section id={"dock"}>
             <div ref={dockRef} className={"dock-container"}>
-                {dockApps.map(({id,name,icon,canOpen}) => (
+                {dockApps.map(({id,name,icon,canOpen}:DockApps) => (
                     <div key={id} className={"relative flex justify-center"}>
                         <button
                             type={"button"}
@@ -77,7 +79,13 @@ const Dock = () => {
                             disabled={!canOpen}
                             onClick={()=>toggleApp({id, canOpen})}
                         >
-                            <img src={`/images/${icon}`} alt={name} loading="lazy" className={canOpen?"": "opacity-60"}/>
+                            <Image
+                                src={`/images/${icon}`}
+                                alt={name}
+                                width={64}
+                                height={64}
+                                className={canOpen?"": "opacity-60"}
+                            />
                         </button>
                     </div>
                 ))}
