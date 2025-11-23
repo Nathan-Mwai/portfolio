@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Georama,Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const georama = Georama({
+    variable: "--font-georama",
+    subsets: ["latin"],
 });
+
+const robotoMono = Roboto_Mono({
+    variable: "--font-roboto",
+    subsets: ["latin"],
+});
+
 
 export const metadata: Metadata = {
   title: "Nathan's Portfolio",
@@ -20,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable}`}
+        className={`${georama.variable} ${robotoMono.variable}`}
       >
         {children}
       </body>
