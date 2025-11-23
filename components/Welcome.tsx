@@ -25,6 +25,8 @@ const renderText = (
     ))
 }
 
+const DISTANCE_DECAY = 20000
+
 const setupTextHover = (container:HTMLElement | null, type: keyof typeof FONT_WEIGHT) => {
     if(!container) return;
 
@@ -45,12 +47,12 @@ const setupTextHover = (container:HTMLElement | null, type: keyof typeof FONT_WE
         letters.forEach((letter) => {
             const { left: l, width: w } = letter.getBoundingClientRect();
             const distance = Math.abs(mouseX - (l - left + w / 2));
-            const intensity = Math.exp(-(distance ** 2) / 20000);
+            const intensity = Math.exp(-(distance ** 2) / DISTANCE_DECAY);
 
             animateLetter(letter, min + (max - min) * intensity);
         });
     };
-    const handleMouseLeave = (e:MouseEvent) => letters.forEach((letter) => animateLetter(letter, base,0.3));
+    const handleMouseLeave = () => letters.forEach((letter) => animateLetter(letter, base,0.3));
 
     container.addEventListener("mousemove", handleMouseMove)
     container.addEventListener("mouseleave", handleMouseLeave)
@@ -77,10 +79,10 @@ const Welcome = () => {
     return (
         <section id="welcome">
             <p ref={subtitleRef}>
-                {renderText("Hey, I'm Nathan! Welcome to my",'text-3xl font-georama',100)}
+                {renderText("Hey, I'm Nathan! Welcome to my",'text-3xl font-georama',FONT_WEIGHT.subtitle.default)}
             </p>
             <h1 ref={titleRef} className={"mt-7"}>
-                {renderText("portfolio", 'text-9xl italic font-georama',400)}
+                {renderText("portfolio", 'text-9xl italic font-georama',FONT_WEIGHT.title.default)}
             </h1>
             <div className={"small-screen"}>
                 <p>This Portfolio is designed for desktop/tablet screen only.</p>
