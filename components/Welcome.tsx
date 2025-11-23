@@ -3,6 +3,7 @@
 import {JSX, useRef} from "react";
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
+import {DISTANCE_DECAY} from "@/constants";
 
 const FONT_WEIGHT = {
     subtitle: {min: 100, max: 400, default:100},
@@ -25,7 +26,6 @@ const renderText = (
     ))
 }
 
-const DISTANCE_DECAY = 20000
 
 const setupTextHover = (container:HTMLElement | null, type: keyof typeof FONT_WEIGHT) => {
     if(!container) return () => {};

@@ -505,6 +505,9 @@ export const locations = {
 
 const INITIAL_Z_INDEX = 1000;
 
+const DISTANCE_DECAY = 20000
+
+
 const WINDOW_CONFIG:WindowConfig = {
     finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
@@ -516,4 +519,4 @@ const WINDOW_CONFIG:WindowConfig = {
     imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
-export { INITIAL_Z_INDEX, WINDOW_CONFIG };
+export { DISTANCE_DECAY,INITIAL_Z_INDEX, WINDOW_CONFIG };
