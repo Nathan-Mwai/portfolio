@@ -5,7 +5,7 @@ import {DISTANCE_DECAY, dockApps} from "@/constants";
 import {Tooltip} from "react-tooltip"
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
-import {DockApps} from "@/type";
+import {DockApps, WindowKey} from "@/type";
 import Image from "next/image";
 import useWindowStore from "@/store/window";
 
@@ -66,18 +66,24 @@ const Dock = () => {
     const toggleApp = (app: { id: string; canOpen: boolean }) => {
         if(!app.canOpen)return;
 
+        if (!(app.id in windows)) {
+            console.error(`Window not found: ${app.id}`);
+            return;
+        }
 
-        const window = windows[app.id]
+        const key = app.id as WindowKey;
+
+        const window = windows[key]
 
         if(!window){
-            console.error(`Window not found: ${app.id}`)
+            console.error(`Window not found: ${key}`)
             return;
         }
 
         if(window.isOpen){
-            closeWindow(app.id);
+            closeWindow(key);
         }else{
-            openWindow(app.id);
+            openWindow(key);
         }
     }
     return (
