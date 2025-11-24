@@ -22,15 +22,16 @@ const useWindowStore = create<StoreState>()(immer((set) => ({
         win.data = data ?? win.data
         state.nextZIndex++
     }),
-    closeWindow: (windowKey, data = null) => set((state) => {
+    closeWindow: (windowKey) => set((state) => {
         const win = state.windows[windowKey];
         if(!win) return;
         win.isOpen = false;
         win.zIndex =INITIAL_Z_INDEX;
         win.data =null
     }),
-    focusWindow: (windowKey, data = null) => set((state) => {
+    focusWindow: (windowKey) => set((state) => {
         const win = state.windows[windowKey];
+        if(!win) return;
         win.zIndex =state.nextZIndex++;
     })
 })))
