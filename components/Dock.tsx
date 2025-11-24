@@ -5,11 +5,14 @@ import {DISTANCE_DECAY, dockApps} from "@/constants";
 import {Tooltip} from "react-tooltip"
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
-import {DockApps} from "@/type";
+import {DockApps, WindowKey} from "@/type";
 import Image from "next/image";
+import useWindowStore from "@/store/window";
 
 
 const Dock = () => {
+    const {openWindow, closeWindow, windows} = useWindowStore()
+
     const dockRef = useRef<HTMLDivElement | null>(null);
 
     useGSAP(()=> {
@@ -60,9 +63,28 @@ const Dock = () => {
     },[])
 
 
-    const toggleApp = (app) => {
-        //TODO: Implement window logic once the button has been clicked
-        //TODO: So what happens next
+    const toggleApp = (app: { id: string; canOpen: boolean }) => {
+        if(!app.canOpen)return;
+
+        if (!(app.id in windows)) {
+            console.error(`Window not found: ${app.id}`);
+            return;
+        }
+
+        const key = app.id as WindowKey;
+
+        const window = windows[key]
+
+        if(!window){
+            console.error(`Window not found: ${key}`)
+            return;
+        }
+
+        if(window.isOpen){
+            closeWindow(key);
+        }else{
+            openWindow(key);
+        }
     }
     return (
         <section id={"dock"}>
