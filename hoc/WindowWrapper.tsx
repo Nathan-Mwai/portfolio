@@ -1,14 +1,15 @@
 "use client"
 import useWindowStore from "@/store/window";
-import {useLayoutEffect, useRef} from "react";
+import {ComponentType, useLayoutEffect, useRef} from "react";
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
+import {WindowKey} from "@/type";
 
 gsap.registerPlugin(Draggable);
 
-const WindowWrapper = (Component, windowKey) => {
-    const Wrapped = (props) => {
+const WindowWrapper = <P extends object> (Component: ComponentType<P>, windowKey:WindowKey) => {
+    const Wrapped = (props:P) => {
         const {focusWindow, windows} = useWindowStore()
         const { isOpen, zIndex } = windows[windowKey];
         const windowRef= useRef(null)
