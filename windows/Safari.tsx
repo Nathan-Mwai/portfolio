@@ -3,6 +3,7 @@ import WindowControls from "@/components/WindowControls";
 import WindowWrapper from "@/hoc/WindowWrapper";
 import {ChevronLeft, ChevronRight, Copy, MoveRight, PanelLeft, Plus, Search, Share, ShieldHalf} from "lucide-react";
 import {blogPosts} from "@/constants";
+import Image from "next/image";
 
 const Safari = () => {
     return (
@@ -43,7 +44,13 @@ const Safari = () => {
                     {blogPosts.map(({id, image , title, date, link}) => (
                         <div key={id} className={"blog-post"}>
                             <div className={"col-span-2"}>
-                                <img src={image} alt={title} />
+                                <Image
+                                  src={image}
+                                  alt={title}
+                                  width={800}
+                                  height={600}
+                                  className="w-full h-auto"
+                                />
                             </div>
                             <div className={"content"}>
                                 <p>{date}</p>
