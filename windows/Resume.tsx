@@ -2,9 +2,21 @@
 import WindowWrapper from "@/hoc/WindowWrapper";
 import WindowControls from "@/components/WindowControls";
 import {Download} from "lucide-react";
-import {Document, Page, pdfjs} from 'react-pdf';
+import { pdfjs} from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
+import dynamic from "next/dynamic";
+
+// Dynamically import react-pdf components
+const Document = dynamic(
+    () => import("react-pdf").then(mod => mod.Document),
+    { ssr: false }
+);
+const Page = dynamic(
+    () => import("react-pdf").then(mod => mod.Page),
+    { ssr: false }
+);
+
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     'pdfjs-dist/build/pdf.worker.min.mjs',
