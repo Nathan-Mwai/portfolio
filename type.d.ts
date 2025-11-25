@@ -1,7 +1,7 @@
 export interface NavLink {
     id: number;
     name: string;
-    type: string;
+    type: WindowKey;
     // location: string;
     // distance: string; // e.g., "2.5 km away"
     // avatar: string;
