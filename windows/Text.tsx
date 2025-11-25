@@ -23,7 +23,7 @@ const Text = () => {
                 {(image || imageUrl) && (
                     <div className={"w-full"}>
                     <img
-                        src={image || imageUrl!}
+                        src={image || imageUrl}
                         alt={name}
                         className={"w-full h-auto object-cover rounded-md flex-shrink-0"}
                     />

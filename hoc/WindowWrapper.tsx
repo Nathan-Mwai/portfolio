@@ -12,7 +12,7 @@ const WindowWrapper = <P extends object> (Component: ComponentType<P>, windowKey
     const Wrapped = (props:P) => {
         const {focusWindow, windows} = useWindowStore()
         const { isOpen, zIndex } = windows[windowKey];
-        const windowRef= useRef(null)
+        const windowRef= useRef<HTMLElement | null>(null)
 
         useGSAP(()=> {
             const el = windowRef.current
