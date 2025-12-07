@@ -1,6 +1,6 @@
 "use client"
 
-import {useRef} from "react";
+import {Activity, useRef} from "react";
 import {DISTANCE_DECAY, dockApps} from "@/constants";
 import {Tooltip} from "react-tooltip"
 import {useGSAP} from "@gsap/react";
@@ -87,6 +87,7 @@ const Dock = () => {
         }
     }
     return (
+
         <section id={"dock"}>
             <div ref={dockRef} className={"dock-container"}>
                 {dockApps.map(({id,name,icon,canOpen}:DockApps) => (
@@ -111,7 +112,9 @@ const Dock = () => {
                         </button>
                     </div>
                 ))}
+                <Activity>
                 <Tooltip id={"dock-tooltip"} place={"top"} className={"tooltip"}/>
+                </Activity>
             </div>
         </section>
     )

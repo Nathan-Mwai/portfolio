@@ -9,6 +9,7 @@ import Text from "@/windows/Text";
 import Image from "@/windows/Image";
 import Contact from "@/windows/Contact";
 import Home from "@/components/Home";
+import {Activity} from "react";
 
 const Page = () => {
     return (
@@ -16,6 +17,7 @@ const Page = () => {
             <Navbar/>
             <Welcome/>
             <Dock/>
+            <Activity>
             <Terminal/>
             <Safari/>
             <Resume/>
@@ -24,6 +26,7 @@ const Page = () => {
             <Image/>
             <Contact/>
             <Home/>
+            </Activity>
         </main>
     )
 }
