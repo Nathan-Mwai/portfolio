@@ -1,6 +1,5 @@
 "use client"
 import dayjs from "dayjs";
-import React from 'react'
 import {navIcons, navLinks} from "@/constants";
 import useWindowStore from "@/store/window";
 
@@ -9,13 +8,15 @@ const Navbar = () => {
     return (
         <nav>
             <div>
-               <img src={"/images/logo.svg"} alt="logo" />
+               <img src={"/images/logo.svg"} alt="logo" className={"dark:invert"}/>
                 <p className={"font-bold"}>Nathan&apos;s PortFolio</p>
 
                 <ul>
                     {navLinks.map(({id, name, type}) => (
-                        <li key={id} onClick={() => openWindow(type)}>
-                            <p>{name}</p>
+                        <li key={id}>
+                            <p onClick={() => openWindow(type)}>
+                            {name}
+                            </p>
                         </li>
                         ))}
                 </ul>
@@ -25,7 +26,7 @@ const Navbar = () => {
                 <ul>
                     {navIcons.map(({id, img}) => (
                         <li key={id}>
-                            <img src={img} alt={`icon-${id}`} className={"img-hover"} />
+                            <img src={img} alt={`icon-${id}`} className={"dark:invert dark:hover:bg-dark-500! icon"} />
                         </li>
                     ))}
                 </ul>
