@@ -1,5 +1,67 @@
-this is a long term project where I focus on speed and performance across all platforms. 
+# Portfolio Development Journal
 
-# Issue 1
-* using the Activity component from React 19 to make components be rendered fast. 
-* Re-correcting some of the data with my own data.
+This repository serves as a long-term project focused on high-performance, cross-platform speed, and a premium responsive user experience. Built with React 19 and GSAP, it leverages cutting-edge web technologies to deliver a desktop-class interface in the browser.
+
+### Current Status
+The project has successfully transitioned to a multi-component architecture utilizing React 19's performance features. A fully functional mobile navigation system inspired by Apple's design language is now live. While the UI is largely complete, the application currently relies on dummy/placeholder data across all windows and components.
+
+### Known Issues
+- **Placeholder Data:** Content across the Terminal, Safari, Finder, and Contact components is currently hardcoded or sourced from `data/mock.json`.
+- **GSAP Hydration:** Occasional minor layout shifts during GSAP initialization on slow client connections.
+- **Mobile Interaction:** Some desktop-style draggable elements require further optimization for touch interactions.
+
+### Next Steps
+1.  **Responsiveness Sweep:** Finalizing breakpoints for tablet and ultra-wide displays.
+2.  **API Integration:** Replacing placeholder JSON with a real-time backend or CMS integration.
+3.  **Performance Profiling:** Fine-tuning GSAP timelines and React Activity blocks for sub-second TTI (Time to Interactive).
+4.  **Touch Support:** Implementing better touch gestures for the `Draggable` window components.
+
+---
+
+### Journal / Progress Log
+
+#### 2026-01-01
+**Title: Finalized Mobile Navbar and Stability Fixes**
+**Summary:** Implemented the mobile-specific navigation bar and addressed environment-specific performance issues dubbed "React2Shell".
+**Details:**
+- **Files changed:** `components/mobile/Navbar.tsx`, `app/page.tsx`, `package.json`; commit `777aa6e`.
+- **Code-level changes:** Added `MobileNavbar` component featuring a "Dynamic Island" style layout with real-time clock via `dayjs`, Wi-Fi, and battery icons. Updated `next` to `16.0.10` for better stability.
+- **Visual/UX changes:** Created a responsive design that hides the desktop Navbar and displays the Apple-like mobile status bar on screens below the `sm` breakpoint.
+- **Remaining tasks:** Optimization of touch-based dragging for windows.
+**Status:** Done
+
+#### 2025-12-20
+**Title: Mobile Navbar Implementation**
+**Summary:** Scaffolding and initial styling of the mobile-first navigation experience.
+**Details:**
+- **Files changed:** `components/mobile/Navbar.tsx`; commit `1e1ed86`.
+- **Code-level changes:** Initialized the mobile navbar component with basic layout and icon integration from `lucide-react`.
+- **Visual/UX changes:** Integrated `dayjs` for the status bar clock and centered a "pill" shaped div to emulate the iPhone Dynamic Island.
+**Status:** Done
+
+#### 2025-12-07
+**Title: Integrated React Activity for Performance Optimization**
+**Summary:** Leveraged React 19's `Activity` (Offscreen) component to manage background rendering of complex UI elements, preventing frame drops during GSAP animations.
+**Details:**
+- **Files changed:** `app/page.tsx`, `components/Dock.tsx`, `components/Home.tsx`, `hoc/WindowWrapper.tsx`; commit `5d7783f`.
+- **Code-level changes:** Wrapped heavy components like `Terminal`, `Safari`, and `Finder` in `<Activity>`. This allows the browser to prioritize the immediate visual feedback of GSAP animations (like the Dock's magnification effect) while pre-rendering hidden window contents.
+- **Rationale:** Given the heavy use of client-side rendering and GSAP, `Activity` ensures that background windows don't consume main-thread resources until they are active, significantly improving the snappiness of the desktop shell.
+- **Visual/UX changes:** Eliminated "flashing" of content during window transitions by pre-calculating styles in `WindowWrapper.tsx`.
+- **Remaining tasks:** Replace dummy data in `data/mock.json` with API integration.
+**Status:** Done
+
+#### 2025-11-25
+**Title: Core Feature Set Completion**
+**Summary:** Finalized the primary windows and location-based state management.
+**Details:**
+- **Files changed:** `windows/Finder.tsx`, `store/location.ts`, `windows/Contact.tsx`; commits `b03a073` to `d033fe3`.
+- **Code-level changes:** Implemented a centralized location store to manage the "filesystem" state across the Finder and Desktop. Created window wrappers for Contact and Resume components.
+**Status:** Done
+
+#### 2025-11-10
+**Title: Initial Shell and State Management**
+**Summary:** Established the project's foundation with Zustand for state and GSAP for the core animation engine.
+**Details:**
+- **Files changed:** `store/window.ts`, `components/Navbar.tsx`, `components/Dock.tsx`; commits `ac67eca` to `c8164c2`.
+- **Code-level changes:** Created the `useWindowStore` to track open/minimized/focused windows. Set up the basic MacOS-inspired grid layout and navigation.
+**Status:** Done

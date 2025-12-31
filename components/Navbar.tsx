@@ -13,8 +13,8 @@ const Navbar = () => {
 
                 <ul>
                     {navLinks.map(({id, name, type}) => (
-                        <li key={id}>
-                            <p onClick={() => openWindow(type)}>
+                        <li key={id} onClick={() => openWindow(type)}>
+                            <p>
                             {name}
                             </p>
                         </li>
@@ -26,7 +26,7 @@ const Navbar = () => {
                 <ul>
                     {navIcons.map(({id, img}) => (
                         <li key={id}>
-                            <img src={img} alt={`icon-${id}`} className={"dark:invert dark:hover:bg-dark-500! icon"} />
+                            <img src={img} alt={`icon-${id}`} className={"dark:invert icon"} />
                         </li>
                     ))}
                 </ul>
