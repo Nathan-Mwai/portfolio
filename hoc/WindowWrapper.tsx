@@ -40,7 +40,9 @@ const WindowWrapper = <P extends object> (Component: ComponentType<P>, windowKey
             el.style.display= isOpen ? "block" : "none";
         },[isOpen])
 
-        return <section id={windowKey} ref={windowRef} style={{zIndex}} className={"absolute"}>
+        // Ensure correct initial paint without relying on effects:
+        // set display based on isOpen at render time to avoid a flash of content.
+        return <section id={windowKey} ref={windowRef} style={{ zIndex, display: isOpen ? "block" : "none" }} className={"absolute"}>
             <Component {...props}
             />
         </section>

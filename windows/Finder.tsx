@@ -7,6 +7,7 @@ import useLocationStore from "@/store/location";
 import clsx from "clsx";
 import useWindowStore from "@/store/window";
 import {WindowKey} from "@/type";
+import {Activity} from "react";
 
 function getWindowKey(item: { fileType: string; kind: string }): WindowKey | null {
     if (item.fileType === "pdf") return "resume";
@@ -63,6 +64,7 @@ const Finder = () => {
                     {renderList("Favorites",Object.values(locations))}
                     {renderList("My Apps",locations.work.children)}
                 </div>
+                <Activity>
             <ul className={"content"}>
                 {activeLocation?.children.map((item) => (
                     <li key={item.id} className={item.position} onClick={()=> openItem(item)}>
@@ -71,6 +73,7 @@ const Finder = () => {
                     </li>
                 ))}
             </ul>
+                </Activity>
             </div>
         </>
     )

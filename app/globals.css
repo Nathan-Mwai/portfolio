@@ -15,6 +15,11 @@ body {
     --font-georama: "Georama", sans-serif;
     --font-roboto: "Roboto Mono", monospace;
     --breakpoint-3xl: 1920px;
+    --color-dark-800: rgba(255, 255, 255, 0.1);
+    --color-dark-700: #1e1e1e;
+    --color-dark-500: rgba(30, 30, 30, 0.8);
+    --color-dark-300: #323232;
+    --color-dark-100: rgba(255, 255, 255, 0.25);
 }
 
 @utility flex-center {
@@ -35,18 +40,14 @@ body {
     }
 
     nav {
-        @apply flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5 select-none;
+        @apply flex justify-between items-center bg-white/50 dark:bg-dark-700/50 backdrop-blur-3xl p-2 px-5 select-none text-black dark:text-white max-sm:hidden ;
 
         div {
-            @apply flex items-center max-sm:w-full max-sm:justify-center gap-5;
-
-            &:last-child {
-                @apply max-sm:hidden;
-            }
+            @apply flex items-center gap-5;
         }
 
         ul {
-            @apply flex items-center gap-5 max-sm:hidden;
+            @apply flex items-center gap-5;
 
             p {
                 @apply text-sm cursor-pointer hover:underline transition-all;
@@ -54,14 +55,14 @@ body {
         }
 
         time {
-            @apply text-sm font-medium text-black;
+            @apply text-sm font-medium text-black dark:text-white;
         }
     }
 }
 
 @layer components {
     .icon {
-        @apply p-1 hover:bg-gray-200 rounded hover:cursor-default;
+        @apply p-1 hover:bg-gray-200 rounded hover:cursor-default dark:hover:bg-dark-500;
     }
 
     #welcome {

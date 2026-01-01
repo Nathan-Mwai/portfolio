@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Development Journal
 
-## Getting Started
+This repository serves as a long-term project focused on high-performance, cross-platform speed, and a premium responsive user experience. Built with React 19 and GSAP, it leverages cutting-edge web technologies to deliver a desktop-class interface in the browser.
 
-First, run the development server:
+### Current Status
+The project has successfully transitioned to a multi-component architecture utilizing React 19's performance features. A fully functional mobile navigation system inspired by Apple's design language is now live. While the UI is largely complete, the application currently relies on dummy/placeholder data across all windows and components.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Known Issues
+- **Placeholder Data:** Content across the Terminal, Safari, Finder, and Contact components is currently hardcoded or sourced from `data/mock.json`.
+- **GSAP Hydration:** Occasional minor layout shifts during GSAP initialization on slow client connections.
+- **Mobile Interaction:** Some desktop-style draggable elements require further optimization for touch interactions.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Next Steps
+1.  **Responsiveness Sweep:** Finalizing breakpoints for tablet and ultra-wide displays.
+2.  **API Integration:** Replacing placeholder JSON with a real-time backend or CMS integration.
+3.  **Performance Profiling:** Fine-tuning GSAP timelines and React Activity blocks for sub-second TTI (Time to Interactive).
+4.  **Touch Support:** Implementing better touch gestures for the `Draggable` window components.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Journal / Progress Log
 
-## Learn More
+#### 2026-01-01
+**Title: Finalized Mobile Navbar and Stability Fixes**
+**Summary:** Implemented the mobile-specific navigation bar and addressed environment-specific performance issues dubbed "React2Shell".
+**Details:**
+- **Files changed:** `components/mobile/Navbar.tsx`, `app/page.tsx`, `package.json`; commit `777aa6e`.
+- **Code-level changes:** Added `MobileNavbar` component featuring a "Dynamic Island" style layout with real-time clock via `dayjs`, Wi-Fi, and battery icons. Updated `next` to `16.0.10` for better stability.
+- **Visual/UX changes:** Created a responsive design that hides the desktop Navbar and displays the Apple-like mobile status bar on screens below the `sm` breakpoint.
+- **Remaining tasks:** Optimization of touch-based dragging for windows.
+**Status:** Done
 
-To learn more about Next.js, take a look at the following resources:
+#### 2025-12-20
+**Title: Mobile Navbar Implementation**
+**Summary:** Scaffolding and initial styling of the mobile-first navigation experience.
+**Details:**
+- **Files changed:** `components/mobile/Navbar.tsx`; commit `1e1ed86`.
+- **Code-level changes:** Initialized the mobile navbar component with basic layout and icon integration from `lucide-react`.
+- **Visual/UX changes:** Integrated `dayjs` for the status bar clock and centered a "pill" shaped div to emulate the iPhone Dynamic Island.
+**Status:** Done
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### 2025-12-07
+**Title: Integrated React Activity for Performance Optimization**
+**Summary:** Leveraged React 19's `Activity` (Offscreen) component to manage background rendering of complex UI elements, preventing frame drops during GSAP animations.
+**Details:**
+- **Files changed:** `app/page.tsx`, `components/Dock.tsx`, `components/Home.tsx`, `hoc/WindowWrapper.tsx`; commit `5d7783f`.
+- **Code-level changes:** Wrapped heavy components like `Terminal`, `Safari`, and `Finder` in `<Activity>`. This allows the browser to prioritize the immediate visual feedback of GSAP animations (like the Dock's magnification effect) while pre-rendering hidden window contents.
+- **Rationale:** Given the heavy use of client-side rendering and GSAP, `Activity` ensures that background windows don't consume main-thread resources until they are active, significantly improving the snappiness of the desktop shell.
+- **Visual/UX changes:** Eliminated "flashing" of content during window transitions by pre-calculating styles in `WindowWrapper.tsx`.
+- **Remaining tasks:** Replace dummy data in `data/mock.json` with API integration.
+**Status:** Done
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### 2025-11-25
+**Title: Core Feature Set Completion**
+**Summary:** Finalized the primary windows and location-based state management.
+**Details:**
+- **Files changed:** `windows/Finder.tsx`, `store/location.ts`, `windows/Contact.tsx`; commits `b03a073` to `d033fe3`.
+- **Code-level changes:** Implemented a centralized location store to manage the "filesystem" state across the Finder and Desktop. Created window wrappers for Contact and Resume components.
+**Status:** Done
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### 2025-11-10
+**Title: Initial Shell and State Management**
+**Summary:** Established the project's foundation with Zustand for state and GSAP for the core animation engine.
+**Details:**
+- **Files changed:** `store/window.ts`, `components/Navbar.tsx`, `components/Dock.tsx`; commits `ac67eca` to `c8164c2`.
+- **Code-level changes:** Created the `useWindowStore` to track open/minimized/focused windows. Set up the basic MacOS-inspired grid layout and navigation.
+**Status:** Done

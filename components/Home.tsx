@@ -5,6 +5,7 @@ import {useGSAP} from "@gsap/react";
 import {Draggable}  from "gsap/Draggable";
 import useWindowStore from "@/store/window";
 import useLocationStore from "@/store/location";
+import {Activity} from "react";
 
 const projects = locations.work?.children ?? []
 
@@ -21,6 +22,7 @@ const Home = () => {
     },[])
     return (
         <section id={"home"}>
+            <Activity>
             <ul>
                 {projects.map((project:any) => (
                     <li key={project.id} className={clsx("group folder", project.windowPosition)} onClick={() => handleOpenProject(project)}>
@@ -29,6 +31,7 @@ const Home = () => {
                     </li>
                 ))}
             </ul>
+            </Activity>
         </section>
     )
 }
