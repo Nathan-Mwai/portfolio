@@ -23,6 +23,7 @@ export interface DockApps {
     name: string;
     icon: string;
     canOpen: boolean;
+    showOnMobile: boolean;
 }
 
 export interface BlogPosts {

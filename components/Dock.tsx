@@ -8,6 +8,7 @@ import gsap from "gsap";
 import {DockApps, WindowKey} from "@/type";
 import Image from "next/image";
 import useWindowStore from "@/store/window";
+import clsx from "clsx";
 
 
 const Dock = () => {
@@ -90,8 +91,8 @@ const Dock = () => {
 
         <section id={"dock"}>
             <div ref={dockRef} className={"dock-container"}>
-                {dockApps.map(({id,name,icon,canOpen}:DockApps) => (
-                    <div key={id} className={"relative flex justify-center"}>
+                {dockApps.map(({id,name,icon,canOpen,showOnMobile}:DockApps) => (
+                    <div key={id} className={clsx("relative flex justify-center",!showOnMobile && "max-sm:hidden")}>
                         <button
                             type={"button"}
                             className={"dock-icon"}
@@ -107,6 +108,7 @@ const Dock = () => {
                                 alt={name}
                                 width={64}
                                 height={64}
+                                loading={"lazy"}
                                 className={canOpen?"": "opacity-60"}
                             />
                         </button>
