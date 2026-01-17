@@ -2,13 +2,7 @@
 
 html,
 body {
-    width: 100dvw;
-    overflow: hidden;
-    height: 100dvh;
-    background-image: url("/images/wallpaper.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    @apply w-dvw h-dvh overflow-hidden bg-[url('/images/wallpaper.png')] bg-cover bg-no-repeat bg-center;
 }
 
 @theme {
@@ -78,10 +72,10 @@ body {
     }
 
     #dock {
-        @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none max-sm:hidden;
+        @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none max-sm:w-full px-5;
 
         .dock-container {
-            @apply bg-white/20 backdrop-blur-md justify-between rounded-2xl p-1.5 flex items-end gap-1.5;
+            @apply bg-white/20 backdrop-blur-md justify-between rounded-2xl max-sm:rounded-3xl p-1.5 max-sm:px-3 flex items-end gap-1.5 max-sm:w-full;
         }
 
         .tooltip {
@@ -89,7 +83,7 @@ body {
         }
 
         .dock-icon {
-            @apply size-14 3xl:size-20 cursor-pointer;
+            @apply size-14 3xl:size-20 max-sm:size-full cursor-pointer;
 
             img {
                 @apply object-cover object-center;

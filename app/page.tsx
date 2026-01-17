@@ -18,8 +18,10 @@ const Page = () => {
         <main>
                 <Navbar/>
                 <MobileNavbar/>
+
             <Welcome/>
             <Dock/>
+
             <Activity>
             <Terminal/>
             <Safari/>

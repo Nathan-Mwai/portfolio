@@ -28,7 +28,7 @@ const renderText = (
 
 
 const setupTextHover = (container:HTMLElement | null, type: keyof typeof FONT_WEIGHT) => {
-    if(!container) return () => {};
+    if(!container) return;
 
     const letters = container.querySelectorAll("span");
     const {min, max, default: base} = FONT_WEIGHT[type];
@@ -79,14 +79,14 @@ const Welcome = () => {
     return (
         <section id="welcome">
             <p ref={subtitleRef}>
-                {renderText("Hey, I'm Nathan! Welcome to my",'text-3xl font-georama',FONT_WEIGHT.subtitle.default)}
+                {renderText("Hey, I'm Nathan! Welcome to my",'text-3xl font-georama max-sm:text-2xl',FONT_WEIGHT.subtitle.default)}
             </p>
             <h1 ref={titleRef} className={"mt-7"}>
-                {renderText("portfolio", 'text-9xl italic font-georama',FONT_WEIGHT.title.default)}
+                {renderText("portfolio", 'text-9xl italic font-georama max-sm:text-6xl',FONT_WEIGHT.title.default)}
             </h1>
-            <div className={"small-screen"}>
-                <p>This Portfolio is designed for desktop/tablet screen only.</p>
-            </div>
+            {/*<div className={"small-screen"}>*/}
+            {/*    <p>This Portfolio is designed for desktop/tablet screen only.</p>*/}
+            {/*</div>*/}
         </section>
     )
 }
