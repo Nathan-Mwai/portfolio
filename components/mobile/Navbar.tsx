@@ -6,7 +6,7 @@ const MobileNavbar = () => {
     return (
         <section
             id="mobile-navbar"
-            className={"flex justify-between items-center py-3 px-5 gap-5 sm:hidden relative z-50 text-white"}>
+            className={"flex justify-between items-center py-3 px-5 gap-5 sm:hidden relative z-10000 text-white"}>
 
             <time>{dayjs().format("h:mm A")}</time>
 

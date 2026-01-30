@@ -201,6 +201,50 @@ body {
         }
     }
 
+    #mobile-terminal {
+        @apply w-screen h-screen bg-white dark:bg-dark-700 select-none absolute top-0 pt-20 z-60 sm:hidden overflow-y-auto;
+
+        .techstack {
+            @apply text-sm font-roboto p-5 text-black dark:text-white;
+
+            .content {
+                @apply my-7 pb-10 border-b border-dashed space-y-5;
+
+                .check {
+                    @apply text-[#00A154] w-5;
+                }
+
+                h3 {
+                    @apply font-semibold text-[#00A154] w-32 ms-2;
+                }
+
+                ul {
+                    @apply flex flex-col ms-7 gap-1 mt-2;
+
+                    li {
+                        @apply before:content-['-'] before:mr-2;
+
+                        &::marker {
+                            @apply text-[#00A154] font-bold;
+                        }
+                    }
+                }
+            }
+
+            .footnote {
+                @apply text-[#00A154] space-y-2;
+
+                p {
+                    @apply flex items-center;
+
+                    svg {
+                        @apply w-5 me-5;
+                    }
+                }
+            }
+        }
+    }
+
     #contact {
         @apply max-w-2xl absolute top-60 left-5/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 

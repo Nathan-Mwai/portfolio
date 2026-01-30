@@ -26,6 +26,14 @@ export interface DockApps {
     showOnMobile: boolean;
 }
 
+export interface MobileWindowHeaderProps {
+    windowKey: WindowKey;
+    title: string;
+    onBack?: () => void;
+    className?: string;
+};
+
+
 export interface BlogPosts {
     id: number;
     date: string;
