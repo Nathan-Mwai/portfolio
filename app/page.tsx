@@ -12,25 +12,28 @@ import Contact from "@/windows/Contact";
 import {Activity} from "react";
 
 import MobileNavbar from "@/components/mobile/Navbar";
+import MobileTerminal from "@/windows/mobile/Terminal";
 
 const Page = () => {
     return (
         <main>
-                <Navbar/>
-                <MobileNavbar/>
+            <Navbar/>
+            <MobileNavbar/>
 
             <Welcome/>
             <Dock/>
 
             <Activity>
-            <Terminal/>
-            <Safari/>
-            <Resume/>
-            <Finder/>
-            <Text/>
-            <Image/>
-            <Contact/>
-            <Home/>
+                <Terminal/>
+                <MobileTerminal/>
+
+                <Safari/>
+                <Resume/>
+                <Finder/>
+                <Text/>
+                <Image/>
+                <Contact/>
+                <Home/>
             </Activity>
         </main>
     )
