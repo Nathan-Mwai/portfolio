@@ -151,31 +151,32 @@ const socials:Socials[] = [
         text: "Github",
         icon: "/icons/github.svg",
         bg: "#f4656b",
-        link: "https://github.com/JavaScript-Mastery-Pro",
+        link: "https://github.com/Nathan-Mwai",
     },
     {
         id: 2,
         text: "Platform",
         icon: "/icons/atom.svg",
         bg: "#4bcb63",
-        link: "https://jsmastery.com/",
+        link: "https://nathanmwai.com/",
     },
     {
         id: 3,
         text: "Twitter/X",
         icon: "/icons/twitter.svg",
         bg: "#ff866b",
-        link: "https://x.com/jsmasterypro",
+        link: "https://x.com/CodebaseJournal",
     },
     {
         id: 4,
         text: "LinkedIn",
         icon: "/icons/linkedin.svg",
         bg: "#05b6f6",
-        link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+        link: "https://www.linkedin.com/in/nathan-mwaniki/",
     },
 ];
 
+//TODO: Change photo links
 const photosLinks:PhotosLinks[] = [
     {
         id: 1,
@@ -204,6 +205,7 @@ const photosLinks:PhotosLinks[] = [
     },
 ];
 
+//TODO: Change photo links
 const gallery:Gallery[] = [
     {
         id: 1,
@@ -234,6 +236,7 @@ export {
     gallery,
 };
 
+//TODO: Update this as well
 const WORK_LOCATION:FolderNode = {
     id: 1,
     type: "work",
@@ -402,6 +405,7 @@ const WORK_LOCATION:FolderNode = {
     ],
 };
 
+//TODO: Update this as well
 const ABOUT_LOCATION:FolderNode = {
     id: 2,
     type: "about",
@@ -455,6 +459,7 @@ const ABOUT_LOCATION:FolderNode = {
     ],
 };
 
+//TODO: Update this as well
 const RESUME_LOCATION: FolderNode = {
     id: 3,
     type: "resume",
@@ -474,6 +479,7 @@ const RESUME_LOCATION: FolderNode = {
     ],
 };
 
+//TODO: Update this as well
 const TRASH_LOCATION: FolderNode = {
     id: 4,
     type: "trash",

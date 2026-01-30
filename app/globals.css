@@ -2,7 +2,7 @@
 
 html,
 body {
-    @apply w-dvw h-dvh overflow-hidden bg-[url('/images/wallpaper.png')] bg-cover bg-no-repeat bg-center;
+    @apply w-dvw h-dvh overflow-hidden bg-[url('/images/violet-evergarden.jpeg')] bg-cover bg-no-repeat bg-center;
 }
 
 @theme {
