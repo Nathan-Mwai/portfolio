@@ -12,7 +12,7 @@ const MobileTerminalInfo = () => {
 
         <div className={"techstack"}>
             <p>
-                <span className={"font-bold"}>@nathan %</span> show tech stack
+                <span className={"font-bold"}>@Nathan %</span> show tech stack
             </p>
 
             <ul className={"content"}>
