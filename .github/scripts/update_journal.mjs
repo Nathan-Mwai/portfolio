@@ -18,12 +18,13 @@ async function run(){
         }
 
         //Prompt
+        const today = new Date().toISOString().slice(0, 10)
         const prompt = `
       You are an automated dev-journal assistant for a Next.js portfolio.
       I have just written some code. Look at the 'git diff' below and write a brief journal entry.
       
       Rules:
-      - Start with a generic date header (e.g. "### Update: {Today's Date}").
+       - Start with the exact header: "### Update: ${today}".
       - Use bullet points.
       - Be casual and first-person ("I updated the navbar...", "I fixed a bug in...").
       - Keep it under 100 words.
@@ -34,7 +35,7 @@ async function run(){
     `;
 
         const result = await model.generateContent(prompt);
-        const journalEntry = result.response.text();
+        const journalEntry = result.response.text() .replace(/^### Update:.*\n?/, `### Update: ${today}\n`);
 
         //Append to README.md
         console.log("Appending README...");
