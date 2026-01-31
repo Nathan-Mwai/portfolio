@@ -69,13 +69,6 @@ The project has successfully transitioned to a multi-component architecture util
 
 ### Update: 2026-01-31
 
-* Integrated Google's Gemini AI to automate documentation.
-* Added a script that generates journal entries from git history.
-* Configured a GitHub Action to update the README on new changes.
-* Added generative‑AI dependencies to power the summaries.
-* Looking forward to a mostly self‑updating journal from here on.
-
-### Update: February 03, 2025
 
 * I integrated Google's Gemini AI to help automate my project documentation.
 * I wrote a new script that analyzes my git diffs to generate journal entries automatically.
