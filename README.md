@@ -65,3 +65,21 @@ The project has successfully transitioned to a multi-component architecture util
 - **Files changed:** `store/window.ts`, `components/Navbar.tsx`, `components/Dock.tsx`; commits `ac67eca` to `c8164c2`.
 - **Code-level changes:** Created the `useWindowStore` to track open/minimized/focused windows. Set up the basic MacOS-inspired grid layout and navigation.
 **Status:** Done
+
+
+### Update: 2026-01-31
+
+
+* I integrated Google's Gemini AI to help automate my project documentation.
+* I wrote a new script that analyzes my git diffs to generate journal entries automatically.
+* I set up a GitHub Action workflow to trigger these updates whenever I push new code.
+* I added the generative-ai dependency to the project.
+* It’s exciting to have a portfolio that can now help document its own evolution!
+
+### Update: 2026-01-31
+
+* I automated my project documentation by integrating Google's Gemini AI.
+* I created a new script that analyzes my git diffs to generate journal entries.
+* I set up a GitHub Action to trigger these updates automatically whenever I push code.
+* I added the generative AI dependency to the project.
+* It’s pretty cool to have a portfolio that handles its own updates now!
