@@ -36,7 +36,7 @@ async function run(){
     `;
 
         const result = await model.generateContent(prompt);
-        const journalEntry = result.response.text() .replace(/^### Update:.*\n?/, `### Update: ${today}\n`);
+        const journalEntry = result.response.text() .replace(/^### Update:\s*\d{4}-\d{2}-\d{2}/, `### Update: ${today}`)
 
         //Append to README.md
         console.log("Appending README...");
