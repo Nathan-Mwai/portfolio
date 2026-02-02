@@ -27,7 +27,7 @@ async function run(){
        - Start with the exact header: "### Update: ${today}".
       - Use bullet points.
       - Be casual and first-person ("I updated the navbar...", "I fixed a bug in...").
-      - Keep it under 100 words.
+      - Keep it under 150 words.
       - DO NOT explain the code, just narrate the progress.
       
       Code Changes:
