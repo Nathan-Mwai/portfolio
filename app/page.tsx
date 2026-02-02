@@ -14,6 +14,7 @@ import {Activity} from "react";
 import MobileNavbar from "@/components/mobile/Navbar";
 import MobileTerminal from "@/windows/mobile/Terminal";
 import MobileSafari from "@/windows/mobile/Safari";
+import MobileResume from "@/windows/mobile/Resume";
 
 const Page = () => {
     return (
@@ -32,6 +33,8 @@ const Page = () => {
                 <MobileSafari/>
 
                 <Resume/>
+                <MobileResume/>
+
                 <Finder/>
                 <Text/>
                 <Image/>

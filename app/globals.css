@@ -387,12 +387,24 @@ body {
     }
 
     #resume {
-        @apply w-fit h-fit absolute top-16 left-7/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+        @apply w-fit h-fit absolute top-16 left-7/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden dark:bg-dark-700;
 
         #window-header {
             h2 {
                 @apply font-bold text-sm text-center flex-1;
             }
+        }
+
+        .resume-pdf{
+            @apply dark:filter dark:invert dark:hue-rotate-180
+        }
+    }
+
+    #mobile-resume {
+        @apply w-screen h-screen bg-white dark:bg-dark-700 select-none absolute top-0 pt-20 z-60 sm:hidden overflow-y-auto;
+
+        .resume-pdf {
+            @apply w-full h-fit object-contain object-cover
         }
     }
 
