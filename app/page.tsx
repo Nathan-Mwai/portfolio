@@ -16,6 +16,7 @@ import MobileTerminal from "@/windows/mobile/Terminal";
 import MobileSafari from "@/windows/mobile/Safari";
 import MobileResume from "@/windows/mobile/Resume";
 import MobileFinder from "@/windows/mobile/Finder";
+import MobileText from "@/windows/mobile/file/Text";
 
 const Page = () => {
     return (
@@ -40,6 +41,8 @@ const Page = () => {
                 <MobileFinder/>
 
                 <Text/>
+                <MobileText/>
+
                 <Image/>
                 <Contact/>
                 <Home/>
