@@ -24,7 +24,8 @@ async function run(){
       I have just written some code. Look at the 'git diff' below and write a brief journal entry.
       
       Rules:
-       - Start with the exact header: "### Update: ${today}".
+      - Generate a short descriptive title (3–6 words) for the update.
+       - Start with the exact header: "### Update: ${today} - {title} ".
       - Use bullet points.
       - Be casual and first-person ("I updated the navbar...", "I fixed a bug in...").
       - Keep it under 150 words.
