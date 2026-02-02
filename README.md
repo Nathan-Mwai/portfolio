@@ -119,3 +119,10 @@ The project has successfully transitioned to a multi-component architecture util
 - I created a new mobile image viewer component to handle file previews on smaller screens.
 - I added some custom CSS to style the mobile image previewer, making sure it covers the screen and handles image scaling correctly.
 - I integrated the new mobile image component into the main page layout so it’s functional within the app's windowing system.
+
+### Update: 2026-02-02 - Improving Journaling and Mobile Previews 
+
+- I updated my automated journaling script to support and require descriptive titles for every entry moving forward.
+- I created a new `MobileImage` component to provide a dedicated preview experience for images on smaller screens.
+- I added some global CSS to ensure mobile image previews are full-screen and handle scaling properly.
+- I hooked the new mobile image viewer into the main page layout so it’s fully integrated into the app's windowing system.
