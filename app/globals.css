@@ -519,6 +519,18 @@ body {
         }
     }
 
+    #mobile-imgfile {
+        @apply w-screen h-screen bg-white dark:bg-dark-700 select-none absolute top-0 pt-20 z-60 sm:hidden overflow-y-auto;
+
+        .preview {
+            @apply px-5 py-2 bg-gray-100/10 dark:bg-dark-700 h-full flex items-center absolute inset-0;
+
+            img {
+                @apply w-full h-fit object-contain object-center;
+            }
+        }
+    }
+
     #home {
         @apply relative z-0 max-sm:hidden;
 
