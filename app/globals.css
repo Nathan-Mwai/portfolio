@@ -452,6 +452,43 @@ body {
         }
     }
 
+    #mobile-finder {
+        @apply w-screen h-screen bg-white dark:bg-dark-700 select-none absolute top-0 z-60 pt-20 sm:hidden overflow-y-auto;
+
+        .breadcrumb {
+            @apply flex items-center px-5 py-3 bg-gray-50 dark:bg-dark-300 border-b border-gray-200 dark:border-dark-500;
+        }
+
+        .finder-gallery {
+            @apply px-5 py-5;
+
+            ul {
+                @apply grid grid-cols-3 gap-4;
+
+                li {
+                    @apply cursor-pointer transition-transform hover:scale-105 active:scale-95;
+
+                    .finder-item {
+                        @apply flex flex-col items-center gap-2;
+
+                        .folder-icon {
+                            @apply flex items-center justify-center w-20 h-20 rounded-xl bg-blue-50 dark:bg-blue-900/20;
+                        }
+
+                        .file-icon {
+                            @apply w-20 h-20 object-contain rounded-lg;
+                        }
+
+                        .item-name {
+                            @apply text-xs text-center text-black dark:text-white font-medium line-clamp-2 w-full px-1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
     #txtfile {
         @apply w-md absolute top-36 right-32 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
