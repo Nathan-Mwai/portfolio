@@ -90,3 +90,10 @@ The project has successfully transitioned to a multi-component architecture util
 * I added a new blog section within the Safari view, complete with post previews and links.
 * I designed a mobile-friendly browser UI, including a functional-looking search bar and navigation footer.
 * I integrated the new Safari component into the main page and added all the necessary styles to keep the mobile experience consistent.
+
+### Update: 2026-02-02
+
+* I built a new mobile-specific resume component to ensure my CV looks great on smaller screens.
+* I added dark mode support to the resume viewer, including a color inversion filter for the PDF itself.
+* I integrated the mobile resume into the main page and updated my global CSS for better responsive handling.
+* I implemented a resize observer to make sure the PDF document scales perfectly to the device width.
