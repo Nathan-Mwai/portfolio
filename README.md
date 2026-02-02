@@ -83,3 +83,10 @@ The project has successfully transitioned to a multi-component architecture util
 * I set up a GitHub Action to trigger these updates automatically whenever I push code.
 * I added the generative AI dependency to the project.
 * It’s pretty cool to have a portfolio that handles its own updates now!
+
+### Update: 2026-02-02
+
+* I built out the mobile version of the Safari window to make the portfolio more responsive.
+* I added a new blog section within the Safari view, complete with post previews and links.
+* I designed a mobile-friendly browser UI, including a functional-looking search bar and navigation footer.
+* I integrated the new Safari component into the main page and added all the necessary styles to keep the mobile experience consistent.
