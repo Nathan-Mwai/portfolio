@@ -97,3 +97,11 @@ The project has successfully transitioned to a multi-component architecture util
 * I added dark mode support to the resume viewer, including a color inversion filter for the PDF itself.
 * I integrated the mobile resume into the main page and updated my global CSS for better responsive handling.
 * I implemented a resize observer to make sure the PDF document scales perfectly to the device width.
+
+### Update: 2026-02-02
+
+* I updated my journal automation script to allow for slightly longer, more descriptive entries.
+* I built a new mobile-specific Finder component to make sure the file explorer feels natural on smaller screens.
+* I added all the necessary CSS for the mobile file browser, including a touch-friendly grid and breadcrumb navigation.
+* I integrated the new MobileFinder into the main page layout so it's ready to use.
+* I implemented the folder navigation logic, allowing me to browse directories and open various file types directly from the mobile UI.
