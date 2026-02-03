@@ -60,7 +60,7 @@ body {
     }
 
     #welcome {
-        @apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:h-screen max-sm:w-full max-sm:px-10;
+        @apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:h-screen max-sm:w-full max-sm:px-10 max-sm:pointer-events-none;
 
         .small-screen {
             @apply sm:hidden m-7 bg-red-300/20 backdrop-blur-lg p-3 rounded-md absolute top-10;
@@ -576,6 +576,28 @@ body {
 
                 p {
                     @apply text-sm text-white text-center px-1 rounded-md group-hover:bg-blue-500 transition-colors max-w-40;
+                }
+            }
+        }
+    }
+
+    #mobile-home {
+        @apply px-5 pt-5 sm:hidden;
+
+        ul {
+            @apply flex flex-wrap gap-3;
+
+            li {
+                @apply hover:scale-105 origin-center transition-all duration-300 cursor-pointer;
+
+                img {
+                    @apply size-20 object-cover rounded-lg;
+                }
+
+                &:last-child {
+                    img {
+                        @apply size-[5.25rem];
+                    }
                 }
             }
         }
