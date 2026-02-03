@@ -3,10 +3,7 @@ import useWindowStore from "@/store/window";
 import {ComponentType, useEffect, useLayoutEffect, useRef, useState} from "react";
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
-import { Draggable } from "gsap/Draggable";
 import {WindowKey} from "@/type";
-
-gsap.registerPlugin(Draggable);
 
 const WindowWrapper = <P extends object> (Component: ComponentType<P>, windowKey:WindowKey) => {
     const Wrapped = (props:P) => {
@@ -38,10 +35,13 @@ const WindowWrapper = <P extends object> (Component: ComponentType<P>, windowKey
             )
         },[isOpen, isDesktop])
 
-        useGSAP(()=> {
+        useGSAP(async ()=> {
             const el = windowRef.current;
             if(!el || !isDesktop) return;
 
+            const {Draggable} = await import('gsap/Draggable');
+            gsap.registerPlugin(Draggable);
+            
             const [instance] = Draggable.create(el,{onPress:()=>focusWindow(windowKey)});
             return () => instance.kill()
             },[isDesktop])
