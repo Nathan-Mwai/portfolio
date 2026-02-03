@@ -141,3 +141,11 @@ The project has successfully transitioned to a multi-component architecture util
 * I integrated the new component into the main page layout so it's officially part of the mobile windowing system.
 * I refactored how I load GSAP and react-pdf by switching to dynamic imports to help optimize the app's performance.
 * I updated the resume viewer to handle client-side loading more gracefully.
+
+### Update: 2026-02-03 - Added Mobile Home Screen Navigation 
+
+* I implemented a new `MobileHome` component to provide a dedicated navigation interface for smaller screens.
+* I added clickable app icons for the Resume and Terminal, hooking them up to the window management system.
+* I updated the global CSS to include specific styling and hover effects for these mobile icons.
+* I tweaked the welcome screen layout to ensure it doesn't interfere with touch events on mobile devices.
+* I integrated the mobile home view into the main page layout.
