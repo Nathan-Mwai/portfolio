@@ -18,6 +18,7 @@ import MobileResume from "@/windows/mobile/Resume";
 import MobileFinder from "@/windows/mobile/Finder";
 import MobileText from "@/windows/mobile/file/Text";
 import MobileImage from "@/windows/mobile/file/Image";
+import MobileContact from "@/windows/mobile/Contact";
 
 const Page = () => {
     return (
@@ -48,6 +49,8 @@ const Page = () => {
                 <MobileImage/>
 
                 <Contact/>
+                <MobileContact/>
+
                 <Home/>
             </Activity>
         </main>
