@@ -326,6 +326,38 @@ body {
         }
     }
 
+    #mobile-contact {
+        @apply w-screen h-screen bg-white dark:bg-dark-700 select-none absolute top-0 pt-20 z-60 sm:hidden overflow-y-auto;
+
+        .content {
+            @apply p-5 space-y-5 flex items-center flex-col;
+
+            h3 {
+                @apply text-xl text-center font-semibold;
+            }
+
+            p {
+                @apply text-base text-center max-w-xs;
+            }
+
+            ul {
+                @apply flex items-center flex-wrap gap-3;
+
+                li {
+                    @apply rounded-lg p-3 w-full hover:-translate-y-0.5 hover:scale-105 origin-center transition-all duration-300;
+
+                    a {
+                        @apply space-y-5;
+                    }
+
+                    p {
+                        @apply font-semibold text-sm text-white text-start;
+                    }
+                }
+            }
+        }
+    }
+
     #photos {
         @apply max-w-3xl absolute top-96 left-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 

@@ -126,3 +126,18 @@ The project has successfully transitioned to a multi-component architecture util
 - I created a new `MobileImage` component to provide a dedicated preview experience for images on smaller screens.
 - I added some global CSS to ensure mobile image previews are full-screen and handle scaling properly.
 - I hooked the new mobile image viewer into the main page layout so it’s fully integrated into the app's windowing system.
+
+### Update: 2026-02-03 - Adding Mobile Contact Component 
+
+* I built a new `MobileContact` component to give mobile users a dedicated way to find my social links.
+* I added a bunch of new styles to the global CSS to handle the mobile contact layout, including nice hover effects for the link cards.
+* I integrated the new component into the main page structure so it's officially part of the app's mobile workflow.
+* I included my profile picture and a brief call-to-action to make the mobile "Let's Connect" section feel more personal.
+
+### Update: 2026-02-03 - Launching Mobile Contact Section 
+
+* I built a new `MobileContact` component to give mobile users a dedicated place to find my social links.
+* I added a bunch of global CSS to handle the mobile contact layout, including some smooth hover effects for the link cards.
+* I integrated the new component into the main page layout so it's officially part of the mobile windowing system.
+* I refactored how I load GSAP and react-pdf by switching to dynamic imports to help optimize the app's performance.
+* I updated the resume viewer to handle client-side loading more gracefully.

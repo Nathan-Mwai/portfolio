@@ -2,7 +2,6 @@
 import {locations} from "@/constants";
 import clsx from "clsx";
 import {useGSAP} from "@gsap/react";
-import {Draggable}  from "gsap/Draggable";
 import useWindowStore from "@/store/window";
 import useLocationStore from "@/store/location";
 import {Activity} from "react";
@@ -17,7 +16,8 @@ const Home = () => {
         setActiveLocation(project)
         openWindow('finder',project)
     }
-    useGSAP(()=>{
+    useGSAP(async ()=>{
+       const {Draggable} = await import('gsap/Draggable');
        Draggable.create('.folder')
     },[])
     return (
