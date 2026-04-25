@@ -14,6 +14,7 @@ const robotoMono = Roboto_Mono({
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://nathanmwai.com"),
   title: {
     default: "Nathan Mwai Mwaniki | Software Engineer & Web Developer",
     template: "%s | Nathan Mwai Mwaniki"
