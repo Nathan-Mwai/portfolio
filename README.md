@@ -155,3 +155,9 @@ The project has successfully transitioned to a multi-component architecture util
 - **Changes:** Integrated a functional PDF viewer with pagination controls, added "Coming Soon" states for the Safari blog component, and updated all constants, images, and the resume to reflect Nathan Mwaniki's professional profile.
 - **Rationale:** These changes transition the application from a generic template to a personalized professional portfolio while enhancing the interactivity of the document viewing experience.
 - **Impact:** Establishes a branded user interface with functional window management and document navigation, providing a polished foundation for future content updates and the "Building in Public" initiative.
+
+### April 25, 2026 - SEO and Metadata Optimization
+
+- **Changes:** Expanded the root layout's metadata configuration to include comprehensive SEO tags, OpenGraph properties, Twitter card support, and canonical links. Integrated the `baseline-browser-mapping` dependency into the project.
+- **Rationale:** To enhance search engine discoverability and ensure professional, consistent branding across social media platforms through rich link previews.
+- **Impact:** Improves the application's SEO ranking and social presence while providing a robust metadata template for page-specific overrides.
