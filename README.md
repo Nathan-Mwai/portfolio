@@ -149,3 +149,9 @@ The project has successfully transitioned to a multi-component architecture util
 * I updated the global CSS to include specific styling and hover effects for these mobile icons.
 * I tweaked the welcome screen layout to ensure it doesn't interfere with touch events on mobile devices.
 * I integrated the mobile home view into the main page layout.
+
+### April 25, 2026 - Implementation of core portfolio windowing system and profile personalization
+
+- **Changes:** Integrated a functional PDF viewer with pagination controls, added "Coming Soon" states for the Safari blog component, and updated all constants, images, and the resume to reflect Nathan Mwaniki's professional profile.
+- **Rationale:** These changes transition the application from a generic template to a personalized professional portfolio while enhancing the interactivity of the document viewing experience.
+- **Impact:** Establishes a branded user interface with functional window management and document navigation, providing a polished foundation for future content updates and the "Building in Public" initiative.
