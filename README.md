@@ -161,3 +161,9 @@ The project has successfully transitioned to a multi-component architecture util
 - **Changes:** Expanded the root layout's metadata configuration to include comprehensive SEO tags, OpenGraph properties, Twitter card support, and canonical links. Integrated the `baseline-browser-mapping` dependency into the project.
 - **Rationale:** To enhance search engine discoverability and ensure professional, consistent branding across social media platforms through rich link previews.
 - **Impact:** Improves the application's SEO ranking and social presence while providing a robust metadata template for page-specific overrides.
+
+### April 25, 2026 - Root Layout and Deployment Configuration Initialization
+
+- **Changes:** Updated the root layout to include a base URL for metadata and enabled static site generation by setting the output mode to 'export' in the Next.js configuration.
+- **Rationale:** These modifications establish a consistent foundation for SEO metadata resolution and prepare the application for static hosting.
+- **Impact:** Ensures correct metadata pathing for search engines and allows the project to be deployed as a static site.
