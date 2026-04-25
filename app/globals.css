@@ -152,6 +152,28 @@ body {
                     }
                 }
             }
+
+            .coming-soon {
+                @apply flex flex-col items-center justify-center gap-5 py-20 text-center;
+
+                .coming-soon-icon {
+                    @apply text-5xl select-none;
+                }
+
+                .coming-soon-title {
+                    @apply text-2xl font-bold text-gray-800 dark:text-white tracking-tight;
+                }
+
+                .coming-soon-sub {
+                    @apply text-sm text-gray-400 leading-relaxed max-w-xs;
+                }
+
+                .coming-soon-badge {
+                    @apply mt-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase
+                           bg-pink-100 text-pink-600 border border-pink-200
+                           animate-pulse;
+                }
+            }
         }
     }
 
@@ -186,6 +208,29 @@ body {
                     a {
                         @apply text-blue-600 text-xs hover:underline flex items-center gap-3;
                     }
+                }
+            }
+
+            .coming-soon {
+                @apply flex flex-col items-center justify-center gap-5 py-20 text-center;
+
+                .coming-soon-icon {
+                    @apply text-5xl select-none;
+                }
+
+                .coming-soon-title {
+                    @apply text-2xl font-bold text-gray-800 dark:text-white tracking-tight;
+                }
+
+                .coming-soon-sub {
+                    @apply text-sm text-gray-400 leading-relaxed max-w-xs;
+                }
+
+                .coming-soon-badge {
+                    @apply mt-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase
+                           bg-pink-100 text-pink-600 border border-pink-200
+                           dark:bg-pink-900/20 dark:text-pink-400 dark:border-pink-800
+                           animate-pulse;
                 }
             }
         }

@@ -245,57 +245,57 @@ const WORK_LOCATION:FolderNode = {
     kind: "folder",
     children: [
         // ▶ Project 1
-        {
-            id: 5,
-            name: "Nike Ecommerce Website Application",
-            icon: "/images/folder.png",
-            kind: "folder",
-            position: "top-10 left-5", // icon position inside Finder
-            windowPosition: "top-[5vh] left-5", // optional: Finder window position
-            children: [
-                {
-                    id: 1,
-                    name: "Nike Project.txt",
-                    icon: "/images/txt.png",
-                    kind: "file",
-                    fileType: "txt",
-                    position: "top-5 left-10",
-                    description: [
-                        "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-                        "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-                        "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
-                        "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
-                    ],
-                },
-                {
-                    id: 2,
-                    name: "nike.com",
-                    icon: "/images/safari.png",
-                    kind: "file",
-                    fileType: "url",
-                    href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
-                    position: "top-10 right-20",
-                },
-                {
-                    id: 4,
-                    name: "nike.png",
-                    icon: "/images/image.png",
-                    kind: "file",
-                    fileType: "img",
-                    position: "top-52 right-80",
-                    imageUrl: "/images/project-1.png",
-                },
-                {
-                    id: 5,
-                    name: "Design.fig",
-                    icon: "/images/plain.png",
-                    kind: "file",
-                    fileType: "fig",
-                    href: "https://google.com",
-                    position: "top-60 right-20",
-                },
-            ],
-        },
+        // {
+        //     id: 5,
+        //     name: "Nike Ecommerce Website Application",
+        //     icon: "/images/folder.png",
+        //     kind: "folder",
+        //     position: "top-10 left-5", // icon position inside Finder
+        //     windowPosition: "top-[5vh] left-5", // optional: Finder window position
+        //     children: [
+        //         {
+        //             id: 1,
+        //             name: "Nike Project.txt",
+        //             icon: "/images/txt.png",
+        //             kind: "file",
+        //             fileType: "txt",
+        //             position: "top-5 left-10",
+        //             description: [
+        //                 "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
+        //                 "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
+        //                 "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
+        //                 "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
+        //             ],
+        //         },
+        //         {
+        //             id: 2,
+        //             name: "nike.com",
+        //             icon: "/images/safari.png",
+        //             kind: "file",
+        //             fileType: "url",
+        //             href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
+        //             position: "top-10 right-20",
+        //         },
+        //         {
+        //             id: 4,
+        //             name: "nike.png",
+        //             icon: "/images/image.png",
+        //             kind: "file",
+        //             fileType: "img",
+        //             position: "top-52 right-80",
+        //             imageUrl: "/images/project-1.png",
+        //         },
+        //         {
+        //             id: 5,
+        //             name: "Design.fig",
+        //             icon: "/images/plain.png",
+        //             kind: "file",
+        //             fileType: "fig",
+        //             href: "https://google.com",
+        //             position: "top-60 right-20",
+        //         },
+        //     ],
+        // },
 
         // ▶ Project 2
         {
@@ -322,11 +322,11 @@ const WORK_LOCATION:FolderNode = {
                 },
                 {
                     id: 2,
-                    name: "ai-resume-analyzer.com",
+                    name: "cb-ai-resume-analyzer.vercel.app",
                     icon: "/images/safari.png",
                     kind: "file",
                     fileType: "url",
-                    href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
+                    href: "https://cb-ai-resume-analyzer.vercel.app/",
                     position: "top-20 left-20",
                 },
                 {
@@ -338,15 +338,15 @@ const WORK_LOCATION:FolderNode = {
                     position: "top-52 left-80",
                     imageUrl: "/images/project-2.png",
                 },
-                {
-                    id: 5,
-                    name: "Design.fig",
-                    icon: "/images/plain.png",
-                    kind: "file",
-                    fileType: "fig",
-                    href: "https://google.com",
-                    position: "top-60 left-5",
-                },
+                // {
+                //     id: 5,
+                //     name: "Design.fig",
+                //     icon: "/images/plain.png",
+                //     kind: "file",
+                //     fileType: "fig",
+                //     href: "https://google.com",
+                //     position: "top-60 left-5",
+                // },
             ],
         },
 
@@ -379,7 +379,7 @@ const WORK_LOCATION:FolderNode = {
                     icon: "/images/safari.png",
                     kind: "file",
                     fileType: "url",
-                    href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
+                    href: "https://nathanmwai.com/",
                     position: "top-10 right-20",
                 },
                 {
@@ -397,7 +397,7 @@ const WORK_LOCATION:FolderNode = {
                     icon: "/images/plain.png",
                     kind: "file",
                     fileType: "fig",
-                    href: "https://google.com",
+                    href: "https://www.figma.com/design/sbzVbbqOARTCDyyAPMXTLB/Food-Delivery-App--Copy-?node-id=3-310&p=f&t=ahuWUZdf1Do2IrOD-0",
                     position: "top-60 right-20",
                 },
             ],
@@ -420,7 +420,7 @@ const ABOUT_LOCATION:FolderNode = {
             kind: "file",
             fileType: "img",
             position: "top-10 left-5",
-            imageUrl: "/images/adrian.jpg",
+            imageUrl: "/images/nathan.webp",
         },
         {
             id: 2,
@@ -429,7 +429,7 @@ const ABOUT_LOCATION:FolderNode = {
             kind: "file",
             fileType: "img",
             position: "top-28 right-72",
-            imageUrl: "/images/adrian-2.jpg",
+            imageUrl: "/images/nathan-1.webp",
         },
         {
             id: 3,
@@ -438,7 +438,7 @@ const ABOUT_LOCATION:FolderNode = {
             kind: "file",
             fileType: "img",
             position: "top-52 left-80",
-            imageUrl: "/images/adrian-3.jpeg",
+            imageUrl: "/images/nathan-3.png",
         },
         {
             id: 4,
@@ -448,12 +448,12 @@ const ABOUT_LOCATION:FolderNode = {
             fileType: "txt",
             position: "top-60 left-5",
             subtitle: "Meet the Developer Behind the Code",
-            image: "/images/adrian.jpg",
+            image: "/images/nathan.webp",
             description: [
-                "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
+                "Hey! I’m Nathan 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
                 "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
                 "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-                "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+                "Outside of dev work, you'll find me streaming at 2AM, binging with Anime, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
             ],
         },
     ],

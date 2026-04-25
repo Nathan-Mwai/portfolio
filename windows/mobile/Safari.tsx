@@ -2,7 +2,7 @@
 
 import MobileWindowWrapper from "@/hoc/MobileWindowWrapper";
 import MobileWindowHeader from "@/components/mobile/WindowHeader";
-import {blogPosts} from "@/constants";
+// import {blogPosts} from "@/constants"; // TODO: Uncomment when real blog posts are available
 import {BookOpen, ChevronLeft, ChevronRight, Copy, Mic, MoveRight, Search, Share} from "lucide-react";
 
 const MobileSafariInfo = () => {
@@ -13,6 +13,8 @@ const MobileSafariInfo = () => {
             <div className="blog">
                 <h2>My Blog</h2>
 
+                {/* TODO: Uncomment the block below once real blog posts are added to constants/index.ts */}
+                {/*
                 <div className={"space-y-8"}>
                     {blogPosts.map(({id, image, title, date, link}) => (
                         <div key={id} className={"blog-post"}>
@@ -28,6 +30,18 @@ const MobileSafariInfo = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+                */}
+
+                {/* Coming Soon placeholder — remove this block when uncommenting the posts above */}
+                <div className={"coming-soon"}>
+                    <div className={"coming-soon-icon"}>✍️</div>
+                    <h3 className={"coming-soon-title"}>Stories incoming</h3>
+                    <p className={"coming-soon-sub"}>
+                        I&apos;m currently brewing up some thoughts worth sharing.<br />
+                        Check back soon — something good is on the way.
+                    </p>
+                    <div className={"coming-soon-badge"}>Coming Soon</div>
                 </div>
             </div>
 

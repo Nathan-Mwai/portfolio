@@ -2,7 +2,7 @@
 import WindowControls from "@/components/WindowControls";
 import WindowWrapper from "@/hoc/WindowWrapper";
 import {ChevronLeft, ChevronRight, Copy, MoveRight, PanelLeft, Plus, Search, Share, ShieldHalf} from "lucide-react";
-import {blogPosts} from "@/constants";
+// import {blogPosts} from "@/constants"; // TODO: Uncomment when real blog posts are available
 import Image from "next/image";
 
 const Safari = () => {
@@ -40,6 +40,9 @@ const Safari = () => {
 
             <div className={"blog"}>
                 <h2>My thoughts</h2>
+
+                {/* TODO: Uncomment the block below once real blog posts are added to constants/index.ts */}
+                {/*
                 <div className={"space-y-8"}>
                     {blogPosts.map(({id, image , title, date, link}) => (
                         <div key={id} className={"blog-post"}>
@@ -61,6 +64,18 @@ const Safari = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+                */}
+
+                {/* Coming Soon placeholder — remove this block when uncommenting the posts above */}
+                <div className={"coming-soon"}>
+                    <div className={"coming-soon-icon"}>✍️</div>
+                    <h3 className={"coming-soon-title"}>Stories incoming</h3>
+                    <p className={"coming-soon-sub"}>
+                        I&apos;m currently brewing up some thoughts worth sharing.<br />
+                        Check back soon — something good is on the way.
+                    </p>
+                    <div className={"coming-soon-badge"}>Coming Soon</div>
                 </div>
             </div>
         </>
