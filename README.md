@@ -167,3 +167,9 @@ The project has successfully transitioned to a multi-component architecture util
 - **Changes:** Updated the root layout to include a base URL for metadata and enabled static site generation by setting the output mode to 'export' in the Next.js configuration.
 - **Rationale:** These modifications establish a consistent foundation for SEO metadata resolution and prepare the application for static hosting.
 - **Impact:** Ensures correct metadata pathing for search engines and allows the project to be deployed as a static site.
+
+### April 25, 2026 - Fix for Dock component crashes via Next.js image optimization adjustment
+
+- **Changes:** Updated `next.config.ts` to set `images.unoptimized` to `true` while maintaining the static export configuration.
+- **Rationale:** This change was introduced to resolve a critical runtime crash in the Dock component caused by Next.js's default image optimization during static site generation.
+- **Impact:** Stabilizes the user interface and ensures all image assets in the Dock load correctly without triggering application failures in the production export.
