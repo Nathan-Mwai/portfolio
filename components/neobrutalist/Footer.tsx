@@ -2,18 +2,9 @@
 
 import React from 'react';
 import { socials } from '@/constants';
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { getSocialIcon } from '@/utils/social';
 
 export default function Footer() {
-    const getSocialIcon = (text: string) => {
-        switch (text.toLowerCase()) {
-            case 'github': return <Github className="size-5" />;
-            case 'linkedin': return <Linkedin className="size-5" />;
-            case 'twitter/x': return <Twitter className="size-5" />;
-            default: return <Mail className="size-5" />;
-        }
-    };
-
     return (
         <footer className="bg-[#FDFBF7] text-black">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between border-t-[4px] border-black">
@@ -38,7 +29,7 @@ export default function Footer() {
                             className="h-full w-14 flex items-center justify-center hover:bg-yellow-300 transition-colors"
                             title={social.text}
                         >
-                            {getSocialIcon(social.text)}
+                            {getSocialIcon(social.text, 'size-5')}
                         </a>
                     ))}
                 </div>

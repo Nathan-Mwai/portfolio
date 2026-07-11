@@ -5,29 +5,23 @@ import Header from "@/components/neobrutalist/Header";
 import Footer from "@/components/neobrutalist/Footer";
 import NeobrutalistCard from "@/components/NeobrutalistCard";
 import NeobrutalistButton from "@/components/NeobrutalistButton";
-import { Github, Linkedin, Twitter, Mail, Copy, Check, ArrowUpRight } from 'lucide-react';
+import { Copy, Check, ArrowUpRight } from 'lucide-react';
 import { socials } from '@/constants';
+import { getSocialIcon } from '@/utils/social';
 
 export default function ContactContent() {
-    const [copied, setCopied] = useState(false);
+    const [copyState, setCopyState] = useState<'idle' | 'success' | 'error'>('idle');
     const emailAddress = "mwaimwaniki001@gmail.com";
 
     const handleCopy = async () => {
         try {
             await navigator.clipboard.writeText(emailAddress);
-            setCopied(true);
-            setTimeout(() => setCopied(false), 2000);
+            setCopyState('success');
+            setTimeout(() => setCopyState('idle'), 2000);
         } catch (err) {
             console.error('Failed to copy text: ', err);
-        }
-    };
-
-    const getSocialIcon = (text: string) => {
-        switch (text.toLowerCase()) {
-            case 'github': return <Github className="size-8" />;
-            case 'linkedin': return <Linkedin className="size-8" />;
-            case 'twitter/x': return <Twitter className="size-8" />;
-            default: return <Mail className="size-8" />;
+            setCopyState('error');
+            setTimeout(() => setCopyState('idle'), 2000);
         }
     };
 
@@ -68,21 +62,22 @@ export default function ContactContent() {
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <a 
+                                <NeobrutalistButton 
                                     href={`mailto:${emailAddress}?subject=Let's%20build%20something%20together!`}
-                                    className="flex-1"
+                                    bgColor="bg-lime-400" 
+                                    className="flex-1 flex items-center justify-center gap-2 uppercase py-3 text-sm"
                                 >
-                                    <NeobrutalistButton bgColor="bg-lime-400" className="w-full flex items-center justify-center gap-2 uppercase py-3 text-sm">
-                                        Open Mail Client <ArrowUpRight className="size-4" />
-                                    </NeobrutalistButton>
-                                </a>
+                                    Open Mail Client <ArrowUpRight className="size-4" />
+                                </NeobrutalistButton>
                                 <NeobrutalistButton 
                                     onClick={handleCopy}
                                     bgColor="bg-white" 
                                     className="flex items-center justify-center gap-2 uppercase py-3 text-sm min-w-[130px]"
                                 >
-                                    {copied ? (
+                                    {copyState === 'success' ? (
                                         <>Copied! <Check className="size-4 text-green-600" /></>
+                                    ) : copyState === 'error' ? (
+                                        <>Failed to copy <span className="text-rose-600 font-bold ml-1">x</span></>
                                     ) : (
                                         <>Copy Email <Copy className="size-4" /></>
                                     )}
@@ -106,7 +101,7 @@ export default function ContactContent() {
                                     >
                                         <div className="flex items-center gap-4">
                                             <div className="p-2 border-[2.5px] border-black rounded-lg bg-[#FAF8F5]">
-                                                {getSocialIcon(social.text)}
+                                                {getSocialIcon(social.text, 'size-8')}
                                             </div>
                                             <span className="font-black uppercase tracking-wider text-sm">
                                                 {social.text}

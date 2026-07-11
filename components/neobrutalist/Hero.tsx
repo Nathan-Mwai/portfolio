@@ -3,19 +3,11 @@
 import React from 'react';
 import NeobrutalistButton from '../NeobrutalistButton';
 import NeobrutalistCard from '../NeobrutalistCard';
-import { Github, Linkedin, Twitter, Mail, ArrowUpRight, Download } from 'lucide-react';
+import { ArrowUpRight, Download } from 'lucide-react';
 import { socials } from '@/constants';
+import { getSocialIcon } from '@/utils/social';
 
 export default function Hero() {
-    // Map socials from constants so they correspond to real links
-    const getSocialIcon = (text: string) => {
-        switch (text.toLowerCase()) {
-            case 'github': return <Github className="size-6" />;
-            case 'linkedin': return <Linkedin className="size-6" />;
-            case 'twitter/x': return <Twitter className="size-6" />;
-            default: return <Mail className="size-6" />;
-        }
-    };
 
     return (
         <section className="grid grid-cols-1 lg:grid-cols-12 border-b-[4px] border-black text-black">
