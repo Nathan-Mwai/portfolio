@@ -173,3 +173,11 @@ The project has successfully transitioned to a multi-component architecture util
 - **Changes:** Updated `next.config.ts` to set `images.unoptimized` to `true` while maintaining the static export configuration.
 - **Rationale:** This change was introduced to resolve a critical runtime crash in the Dock component caused by Next.js's default image optimization during static site generation.
 - **Impact:** Stabilizes the user interface and ensures all image assets in the Dock load correctly without triggering application failures in the production export.
+
+### Update: 2026-07-11 - Built Neobrutalist Contact Page 
+
+* I created a brand new Contact page featuring a bold, Neobrutalist design.
+* I added a handy "copy to clipboard" feature for my email address to make reaching out easier.
+* I integrated my social media profiles with dynamic icons and interactive hover effects.
+* I updated the global CSS, swapping out the old background for a clean grid pattern and enabling smooth scrolling across the site.
+* I refined the main layout containers to improve the overall responsiveness and scrolling behavior.
