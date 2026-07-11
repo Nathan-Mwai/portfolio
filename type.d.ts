@@ -129,3 +129,20 @@ type WindowKey =
 // Define the full config type
 type WindowConfig = Record<WindowKey, WindowState>;
 
+export interface Experience {
+    id: number;
+    role: string;
+    company: string;
+    period: string;
+    bullets: string[];
+}
+
+export interface Education {
+    id: number;
+    degree: string;
+    school: string;
+    period: string;
+    bullets?: string[];
+}
+
+

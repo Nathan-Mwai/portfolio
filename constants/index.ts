@@ -8,7 +8,9 @@ import {
     PhotosLinks,
     Socials,
     TechStack,
-    WindowConfig
+    WindowConfig,
+    Experience,
+    Education
 } from "@/type";
 
 const navLinks: NavLink[] = [
@@ -225,6 +227,66 @@ const gallery:Gallery[] = [
     },
 ];
 
+const experience: Experience[] = [
+    {
+        id: 1,
+        role: "GDG Organizer",
+        company: "Google Developers Group on Campus, UoN",
+        period: "April 2026 – Present",
+        bullets: [
+            "Organized and led campus technology sessions, sharing software development best practices.",
+            "Empowered the student developer community through peer-to-peer training."
+        ]
+    },
+    {
+        id: 2,
+        role: "Space Manager",
+        company: "University of Nairobi (Skills Centre)",
+        period: "September 2025 – April 2026",
+        bullets: [
+            "Managed facility logistics and student welfare, providing crucial front office support.",
+            "Streamlined operational workflows for student-led innovation."
+        ]
+    },
+    {
+        id: 3,
+        role: "Software Developer",
+        company: "SitePlann",
+        period: "June 2025 – August 2025",
+        bullets: [
+            "Contributed to the end-to-end development of SitePlann, a construction industry workflow SaaS.",
+            "Engineered core SaaS infrastructure enabling scalable multi-tenant deployments.",
+            "Designed database schemas for high data consistency, performance, and scalability.",
+            "Integrated subscription payment portals (tiered pricing and automated billing) and RBAC."
+        ]
+    },
+    {
+        id: 4,
+        role: "Software Engineer Intern",
+        company: "AU Innovation LTD",
+        period: "March 2024 – May 2024 & Feb 2025",
+        bullets: [
+            "Supported cross-departmental initiatives for seamless project execution.",
+            "Assisted in deploying and customizing Microsoft ERP systems for local agencies."
+        ]
+    }
+];
+
+const education: Education[] = [
+    {
+        id: 1,
+        degree: "Bachelor of Arts, Economics",
+        school: "University of Nairobi",
+        period: "September 2024 – September 2028"
+    },
+    {
+        id: 2,
+        degree: "Certificate in Software Engineering",
+        school: "Moringa School",
+        period: "June 2024 – November 2024"
+    }
+];
+
 export {
     navLinks,
     navIcons,
@@ -234,6 +296,8 @@ export {
     socials,
     photosLinks,
     gallery,
+    experience,
+    education
 };
 
 //TODO: Update this as well

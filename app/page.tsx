@@ -1,62 +1,70 @@
-import Navbar from "@/components/Navbar";
-import Welcome from "@/components/Welcome";
-import Dock from "@/components/Dock";
-import Home from "@/components/Home";
-import Terminal from "@/windows/Terminal";
-import Safari from "@/windows/Safari";
-import Resume from "@/windows/Resume";
-import Finder from "@/windows/Finder";
-import Text from "@/windows/Text";
-import Image from "@/windows/Image";
-import Contact from "@/windows/Contact";
-import {Activity} from "react";
+import Header from "@/components/neobrutalist/Header";
+import Hero from "@/components/neobrutalist/Hero";
+import SkillsBar from "@/components/neobrutalist/SkillsBar";
+import ProjectsAndCertifications from "@/components/neobrutalist/ProjectsAndCertifications";
+import ExperienceTimeline from "@/components/neobrutalist/ExperienceTimeline";
+import Footer from "@/components/neobrutalist/Footer";
 
-import MobileNavbar from "@/components/mobile/Navbar";
-import MobileTerminal from "@/windows/mobile/Terminal";
-import MobileSafari from "@/windows/mobile/Safari";
-import MobileResume from "@/windows/mobile/Resume";
-import MobileFinder from "@/windows/mobile/Finder";
-import MobileText from "@/windows/mobile/file/Text";
-import MobileImage from "@/windows/mobile/file/Image";
-import MobileContact from "@/windows/mobile/Contact";
-import MobileHome from "@/components/mobile/Home";
+export default function Page() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nathan Mwai Mwaniki",
+        "url": "https://nathanmwai.com",
+        "image": "https://nathanmwai.com/images/nathan.webp",
+        "jobTitle": "Full-Stack Software Engineer",
+        "alumniOf": [
+            {
+                "@type": "EducationalOrganization",
+                "name": "Moringa School"
+            },
+            {
+                "@type": "EducationalOrganization",
+                "name": "University of Nairobi"
+            }
+        ],
+        "knowsAbout": [
+            "Software Engineering",
+            "Web Development",
+            "Mobile Development",
+            "TypeScript",
+            "React",
+            "Next.js",
+            "Node.js",
+            "SaaS Infrastructures"
+        ],
+        "sameAs": [
+            "https://github.com/Nathan-Mwai",
+            "https://www.linkedin.com/in/nathan-mwaniki/",
+            "https://x.com/CodebaseJournal"
+        ]
+    };
 
-const Page = () => {
     return (
-        <main>
-            <Navbar/>
-            <MobileNavbar/>
+        <main className="w-full min-h-screen bg-[#FDFBF7] text-black">
+            {/* Structured Schema for Search Engines */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
 
-            <Welcome/>
-            <Dock/>
+            {/* Header / Nav */}
+            <Header />
 
-            <Activity>
-                <Terminal/>
-                <MobileTerminal/>
+            {/* Hero Grid Block */}
+            <Hero />
 
-                <Safari/>
-                <MobileSafari/>
+            {/* Scrolling / static tech stack list */}
+            <SkillsBar />
 
-                <Resume/>
-                <MobileResume/>
+            {/* Projects & Education / Certifications grid */}
+            <ProjectsAndCertifications />
 
-                <Finder/>
-                <MobileFinder/>
+            {/* Professional timeline experience */}
+            <ExperienceTimeline />
 
-                <Text/>
-                <MobileText/>
-
-                <Image/>
-                <MobileImage/>
-
-                <Contact/>
-                <MobileContact/>
-
-                <Home/>
-                <MobileHome/>
-
-            </Activity>
+            {/* Copyright & Social links */}
+            <Footer />
         </main>
-    )
+    );
 }
-export default Page
