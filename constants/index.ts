@@ -578,21 +578,3 @@ export const locations = {
     resume: RESUME_LOCATION,
     trash: TRASH_LOCATION,
 };
-
-const INITIAL_Z_INDEX = 1000;
-
-const DISTANCE_DECAY = 20000
-
-
-const WINDOW_CONFIG:WindowConfig = {
-    finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-};
-
-export { DISTANCE_DECAY,INITIAL_Z_INDEX, WINDOW_CONFIG };
