@@ -173,3 +173,35 @@ The project has successfully transitioned to a multi-component architecture util
 - **Changes:** Updated `next.config.ts` to set `images.unoptimized` to `true` while maintaining the static export configuration.
 - **Rationale:** This change was introduced to resolve a critical runtime crash in the Dock component caused by Next.js's default image optimization during static site generation.
 - **Impact:** Stabilizes the user interface and ensures all image assets in the Dock load correctly without triggering application failures in the production export.
+
+### Update: 2026-07-11 - Built Neobrutalist Contact Page 
+
+* I created a brand new Contact page featuring a bold, Neobrutalist design.
+* I added a handy "copy to clipboard" feature for my email address to make reaching out easier.
+* I integrated my social media profiles with dynamic icons and interactive hover effects.
+* I updated the global CSS, swapping out the old background for a clean grid pattern and enabling smooth scrolling across the site.
+* I refined the main layout containers to improve the overall responsiveness and scrolling behavior.
+
+### Update: 2026-07-11 - Building the Neobrutalist Contact Page 
+
+* I designed and implemented a brand new Contact page using a bold, Neobrutalist aesthetic to match the rest of my portfolio.
+* I added a "copy to clipboard" feature for my email address to make it easier for people to reach out.
+* I integrated my social media profiles with dynamic icons and interactive hover effects.
+* I updated the global CSS to include a clean grid background pattern and enabled smooth scrolling across the site.
+* I refined the layout and metadata to ensure the page is responsive and optimized for search engines.
+
+### Update: 2026-07-11 - Built New Neobrutalist Contact Page 
+
+* I designed and implemented a brand-new Contact page featuring a bold Neobrutalist aesthetic.
+* I added a useful "copy to clipboard" feature for my email address and a quick-link button to open mail clients.
+* I integrated my social media links using dynamic icons with interactive hover states.
+* I configured the page metadata and updated my project documentation to reflect these latest changes.
+* I included a clean grid background and refined the layout to ensure everything looks great on mobile and desktop.
+
+### Update: 2026-07-11 - Built Neobrutalist Contact Page 
+
+* I designed and implemented a brand-new Contact page featuring a bold Neobrutalist aesthetic.
+* I added a "copy to clipboard" feature for my email address and a quick-link button to open mail clients.
+* I integrated my social media profiles using dynamic icons with interactive hover states.
+* I refined the layout to ensure responsiveness and included a clean grid background pattern.
+* I updated the project documentation to reflect these new features and UI improvements.
