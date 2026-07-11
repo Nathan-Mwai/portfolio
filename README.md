@@ -181,3 +181,11 @@ The project has successfully transitioned to a multi-component architecture util
 * I integrated my social media profiles with dynamic icons and interactive hover effects.
 * I updated the global CSS, swapping out the old background for a clean grid pattern and enabling smooth scrolling across the site.
 * I refined the main layout containers to improve the overall responsiveness and scrolling behavior.
+
+### Update: 2026-07-11 - Building the Neobrutalist Contact Page 
+
+* I designed and implemented a brand new Contact page using a bold, Neobrutalist aesthetic to match the rest of my portfolio.
+* I added a "copy to clipboard" feature for my email address to make it easier for people to reach out.
+* I integrated my social media profiles with dynamic icons and interactive hover effects.
+* I updated the global CSS to include a clean grid background pattern and enabled smooth scrolling across the site.
+* I refined the layout and metadata to ensure the page is responsive and optimized for search engines.
