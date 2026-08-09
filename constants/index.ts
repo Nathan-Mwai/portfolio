@@ -277,13 +277,120 @@ const education: Education[] = [
         id: 1,
         degree: "Bachelor of Arts, Economics",
         school: "University of Nairobi",
-        period: "September 2024 – September 2028"
+        period: "September 2024 – September 2028",
+        skills: ["Economics", "Data Analysis"]
     },
     {
         id: 2,
-        degree: "Certificate in Software Engineering",
+        degree: "Agent Fundamentals",
+        school: "Google",
+        period: "Issued August 2026",
+        credentialId: "26423143",
+        link: "https://www.skills.google/public_profiles/25411a1f-77a3-4e57-a2b7-2c57cd744a6f/badges/26423143",
+        skills: ["Agents", "AI", "Software Development"]
+    },
+    {
+        id: 3,
+        degree: "Leading transformations: Manage change",
+        school: "Macquarie University",
+        period: "Issued August 2026",
+        credentialId: "33BXWT0CREDV",
+        link: "https://www.coursera.org/account/accomplishments/verify/33BXWT0CREDV",
+        skills: ["Change Management", "Leadership"]
+    },
+    {
+        id: 4,
+        degree: "Google AI Essentials V1",
+        school: "Coursera",
+        period: "Issued May 2026",
+        link: "https://www.credly.com/badges/af7b6bf0-811e-42f1-9821-9de648aab1ee/linked_in_profile",
+        skills: ["AI Essentials"]
+    },
+    {
+        id: 5,
+        degree: "Google AI Essentials",
+        school: "Google",
+        period: "Issued May 2026",
+        credentialId: "SCMO4XEKSY6W",
+        link: "https://www.coursera.org/account/accomplishments/specialization/SCMO4XEKSY6W",
+        skills: ["AI Essentials"]
+    },
+    {
+        id: 6,
+        degree: "Use AI Responsibly",
+        school: "Google",
+        period: "Issued May 2026",
+        credentialId: "4KR83R2OWMUE",
+        link: "https://www.coursera.org/account/accomplishments/verify/4KR83R2OWMUE",
+        skills: ["Ethics", "Responsible AI"]
+    },
+    {
+        id: 7,
+        degree: "Discover the Art of Prompting",
+        school: "Google",
+        period: "Issued May 2026",
+        credentialId: "FELBOEGJ9ZXI",
+        link: "https://www.coursera.org/account/accomplishments/verify/FELBOEGJ9ZXI",
+        skills: ["Prompt Engineering"]
+    },
+    {
+        id: 8,
+        degree: "Maximize Productivity With AI Tools",
+        school: "Google",
+        period: "Issued May 2026",
+        credentialId: "6V0NQ8AK2ICM",
+        link: "https://www.coursera.org/account/accomplishments/verify/6V0NQ8AK2ICM",
+        skills: ["AI Tools", "Productivity"]
+    },
+    {
+        id: 9,
+        degree: "Introduction to AI",
+        school: "Google",
+        period: "Issued April 2026",
+        credentialId: "A4T0588V0O69",
+        link: "https://www.coursera.org/account/accomplishments/verify/A4T0588V0O69",
+        skills: ["AI (Artificial Intelligence)"]
+    },
+    {
+        id: 10,
+        degree: "Software Engineering",
         school: "Moringa School",
-        period: "June 2024 – November 2024"
+        period: "Issued November 2024",
+        link: "https://www.linkedin.com/in/nathan-mwaniki/details/certifications/",
+        skills: ["HTML", "CSS Flexbox", "Tailwind CSS", "JavaScript", "TypeScript", "Python", "Express.js", "Node.js", "MERN", "PERN"]
+    },
+    {
+        id: 11,
+        degree: "Design Thinking",
+        school: "LinkedIn",
+        period: "Issued November 2024",
+        link: "https://www.linkedin.com/learning/certificates/ecc78b085b36125a506be0e4fa9c270329f069a7b724c78ffc8455e136599a66",
+        skills: ["Design"]
+    },
+    {
+        id: 12,
+        degree: "Problem Solving Techniques",
+        school: "LinkedIn",
+        period: "Issued November 2024",
+        link: "https://www.linkedin.com/learning/certificates/51bbdf1db01d495696f58255ece0994ac5c4857078cc070c5b40e19b11d80329",
+        skills: ["Project Management"]
+    },
+    {
+        id: 13,
+        degree: "Leading Yourself",
+        school: "LinkedIn",
+        period: "Issued September 2024",
+        link: "https://www.linkedin.com/learning/certificates/8088879eadd89c5a99c0e03e4fe944d5e2bc9b01430a5f6c56a1d6d8d6db8140?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BcT%2BgD7J7ROSAVCfwufR0XQ%3D%3D",
+        skills: ["Leadership", "Self-Management"]
+    },
+    {
+        id: 14,
+        degree: "Responsive Web Design",
+        school: "FreeCodeCamp",
+        period: "Issued June 2024",
+        credentialId: "nathanmwai-rwd",
+        link: "https://www.freecodecamp.org/certification/nathanmwai/responsive-web-design",
+        skills: ["CSS", "HTML"]
     }
 ];
 

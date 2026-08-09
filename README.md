@@ -205,3 +205,11 @@ The project has successfully transitioned to a multi-component architecture util
 * I integrated my social media profiles using dynamic icons with interactive hover states.
 * I refined the layout to ensure responsiveness and included a clean grid background pattern.
 * I updated the project documentation to reflect these new features and UI improvements.
+
+### Update: 2026-08-09 - Enhanced Education and Certification UI 
+
+- I significantly expanded my education and certifications list with detailed entries from Google, LinkedIn, and Coursera.
+- I implemented a sleek custom scrollbar in the global styles to improve the browsing experience.
+- I updated the education cards to include skill tags, credential IDs, and "Verify Credential" buttons for better validation.
+- I constrained the height of the certifications section to keep the layout manageable while handling the new content.
+- I refined the typography and neobrutalist styling to ensure text remains readable even with more complex data.

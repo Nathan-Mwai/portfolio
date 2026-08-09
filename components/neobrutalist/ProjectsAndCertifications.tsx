@@ -226,29 +226,63 @@ export default function ProjectsAndCertifications() {
                         Education &amp; Certs
                     </h2>
 
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-5 max-h-[500px] overflow-y-auto pr-2 custom-scrollbar">
                         {education.map((edu) => (
                             <NeobrutalistCard 
                                 key={edu.id} 
                                 bgColor="bg-white" 
-                                className="p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] transition-all"
+                                className="p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] transition-all flex flex-col gap-3 text-black"
                             >
                                 <div className="flex gap-3 items-start">
-                                    <div className="p-2 bg-yellow-300 border-[2.5px] border-black rounded-lg">
+                                    <div className="p-2 bg-yellow-300 border-[2.5px] border-black rounded-lg shrink-0">
                                         <Award className="size-5" />
                                     </div>
-                                    <div>
-                                        <h4 className="font-black text-sm uppercase tracking-wide text-rose-500 mb-1">
+                                    <div className="min-w-0 flex-1">
+                                        <h4 className="font-black text-xs uppercase tracking-wider text-rose-500 mb-1 truncate" title={edu.school}>
                                             {edu.school}
                                         </h4>
-                                        <h3 className="font-bold text-base uppercase leading-tight mb-1 text-black">
+                                        <h3 className="font-black text-sm uppercase leading-tight mb-1 text-black break-words">
                                             {edu.degree}
                                         </h3>
-                                        <p className="font-mono text-xs text-gray-500">
+                                        <p className="font-mono text-[10px] text-gray-500 uppercase tracking-widest">
                                             {edu.period}
                                         </p>
+                                        {edu.credentialId && (
+                                            <p className="font-mono text-[9px] text-gray-400 mt-1 select-all">
+                                                ID: {edu.credentialId}
+                                            </p>
+                                        )}
                                     </div>
                                 </div>
+
+                                {edu.skills && edu.skills.length > 0 && (
+                                    <div className="flex flex-wrap gap-1 mt-1">
+                                        {edu.skills.map((skill) => (
+                                            <span 
+                                                key={skill} 
+                                                className="px-1.5 py-0.5 bg-yellow-100 text-black border-[1.5px] border-black text-[9px] font-black uppercase tracking-wider"
+                                            >
+                                                {skill}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
+
+                                {edu.link && (
+                                    <a 
+                                        href={edu.link} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer" 
+                                        className="w-full mt-2 block"
+                                    >
+                                        <NeobrutalistButton 
+                                            bgColor="bg-white hover:bg-yellow-300" 
+                                            className="w-full text-[10px] py-1.5 uppercase flex items-center justify-center gap-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] active:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] active:translate-x-[2px] active:translate-y-[2px]"
+                                        >
+                                            Verify Credential <ArrowUpRight className="size-3" />
+                                        </NeobrutalistButton>
+                                    </a>
+                                )}
                             </NeobrutalistCard>
                         ))}
                     </div>
