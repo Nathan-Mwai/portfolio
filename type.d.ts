@@ -143,6 +143,9 @@ export interface Education {
     school: string;
     period: string;
     bullets?: string[];
+    link?: string;
+    skills?: string[];
+    credentialId?: string;
 }
 
 
